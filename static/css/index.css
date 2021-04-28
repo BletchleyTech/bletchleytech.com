@@ -203,7 +203,7 @@ h3
 {
     margin-bottom: 0;
 }
-#links .col-md-6 a, address
+#links .col-md-6 p, #links .col-md-6 a, address
 {
     font-size: 1.2rem;
     color: inherit;
@@ -292,5 +292,12 @@ h3
     .copy
     {
         padding-top: 3%;
+    }
+}
+@media screen and (max-width: 300px)
+{
+    h1
+    {
+        font-size: 2.5rem;
     }
 }
