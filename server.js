@@ -1,8 +1,11 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+const services = require("./services/services");
 const app = express();
 const port = 3000;
 
 app.use(express.static(`${__dirname}/static`));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
     res.sendFile(`${__dirname}/index.html`);
@@ -12,12 +15,14 @@ app.get("/about", (req, res) => {
     res.sendFile(`${__dirname}/about.html`);
 });
 
-app.get("/services", (req, res) => {
-    res.send("<h1>Services page</h1>");
-});
+app.use("/services", services);
 
 app.get("/contact", (req, res) => {
-    res.send("<h1>Contact page</h1>");
+    res.sendFile(`${__dirname}/contact.html`);
+});
+
+app.post("/contact", (req, res) => {
+    res.send(req.body);
 });
 
 app.use("/robots.txt", (req, res) => {
