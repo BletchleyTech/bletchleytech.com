@@ -15,7 +15,7 @@ app.get("/about", (req, res) => {
     res.sendFile(`${__dirname}/about.html`);
 });
 
-// app.use("/services", services);
+app.use("/services", services);
 
 app.get("/contact", (req, res) => {
     res.sendFile(`${__dirname}/contact.html`);
