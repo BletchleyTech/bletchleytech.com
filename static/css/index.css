@@ -22,6 +22,7 @@ nav.navbar .navbar-brand
 {
     color: #FFFFFF;
     font-size: 1.5rem;
+    margin-right: 0;
 }
 nav.navbar a
 {
@@ -299,5 +300,24 @@ h3
     h1
     {
         font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 230px)
+{
+    h1
+    {
+        font-size: 2rem;
+    }
+    #title p
+    {
+        font-size: 1.2rem;
+    }
+    .josefin
+    {
+        font-size: 1.4rem;
+    }
+    .bi-arrow-down-short
+    {
+        font-size: 3rem;
     }
 }
