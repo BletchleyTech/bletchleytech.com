@@ -23,6 +23,7 @@ nav.navbar .navbar-brand
 {
     color: #FFFFFF;
     font-size: 1.5rem;
+    margin-right: 0;
 }
 nav.navbar a
 {
@@ -98,6 +99,24 @@ h1
     color: #FFFFFF;
     opacity: 0;
 }
+#about
+{
+    background-image: url("./../images/about.jpg");
+}
+#about, #clients
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000000;
+}
+#about .text p
+{
+    padding: 3%;
+    font-family: 'Jura';
+    font-size: 2rem;
+    font-weight: 700;
+}
 #why
 {
     background-image: url("./../images/why.jpg");
@@ -122,13 +141,16 @@ h1
     text-align: center;
     font-family: 'Spartan';
     font-weight: 700;
-    color: inherit;
     width: 100%;
     font-size: 1.1rem;
 }
+#why .service
+{
+    color: #AAAAAA;
+}
 h2
 {
-    font-family: 'Lato';
+    font-family: 'Montserrat';
     font-weight: 700;
     font-size: 3rem;
 }
@@ -137,8 +159,16 @@ h2
     width: 60%;
     margin: 0 auto 1%;
     font-size: 1.5rem;
-    font-family: 'Syne';
+    font-family: 'Podkova';
     line-height: 1.1;
+}
+#clients
+{
+    background-image: url("./../images/clients.jpg");
+}
+#clients .service
+{
+    color: #555555;
 }
 #links
 {
@@ -216,8 +246,19 @@ h3
         bottom: 1%;
     }
 }
+@media screen and (max-width: 991px)
+{
+    #about .text p
+    {
+        width: 70%;
+    }
+}
 @media screen and (max-width: 767px)
 {
+    #about .text p
+    {
+        width: 80%;
+    }
     #links .col-md-6
     {
         padding: 3% 1%;
@@ -227,13 +268,17 @@ h3
         border: 0;
         border-bottom: 1px solid;
     }
-    #links br
+    #links .social + br
     {
         display: none;
     }
 }
 @media screen and (max-width: 550px)
 {
+    #about .text p
+    {
+        width: 90%;
+    }
     h2
     {
         width: 90%;
@@ -244,11 +289,22 @@ h3
         width: 70%;
     }
 }
+@media screen and (max-width: 450px)
+{
+    #about .text p
+    {
+        font-size: 1.8rem;
+    }
+}
 @media screen and (max-width: 400px)
 {
     h1
     {
         font-size: 3rem;
+    }
+    #about .text p
+    {
+        font-size: 1.5rem;
     }
     h2
     {
@@ -268,7 +324,11 @@ h3
     {
         font-size: 1.2rem;
     }
-    #links .col-md-6 a, address
+    #links .col-md-6
+    {
+        padding: 3%;
+    }
+    #links .col-md-6 p, #links .col-md-6 a, address
     {
         font-size: 1rem;
     }
@@ -290,5 +350,20 @@ h3
     .text p
     {
         width: 90%;
+    }
+}
+@media screen and (max-width: 230px)
+{
+    h1
+    {
+        font-size: 2rem;
+    }
+    .bi-arrow-down-short
+    {
+        font-size: 3rem;
+    }
+    #about .text p
+    {
+        font-size: 1.3rem;
     }
 }
