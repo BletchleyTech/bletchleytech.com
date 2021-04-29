@@ -25,8 +25,12 @@ app.post("/contact", (req, res) => {
     res.send(req.body);
 });
 
-app.use("/robots.txt", (req, res) => {
+app.all("/robots.txt", (req, res) => {
     res.sendFile(`${__dirname}/robots.txt`);
+});
+
+app.use("/", (req, res) => {
+    res.send("<h1>404 Error Page</h1>");
 });
 
 app.listen(port);
