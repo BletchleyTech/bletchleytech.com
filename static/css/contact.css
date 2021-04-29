@@ -159,6 +159,10 @@ input[type="submit"]
     padding: 2% 5%;
     font-weight: 700;
 }
+input[type="submit"]:focus
+{
+    box-shadow: none;
+}
 #links
 {
     min-height: auto;
