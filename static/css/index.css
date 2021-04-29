@@ -200,6 +200,10 @@ h3
 {
     border-right: 1px solid;
 }
+#links .col-md-6:first-of-type a
+{
+    text-decoration: none;
+}
 #links .col-md-6 p
 {
     margin-bottom: 0;
@@ -208,12 +212,31 @@ h3
 {
     font-size: 1.2rem;
     color: inherit;
+}
+#links .col-md-6 a.social
+{
     text-decoration: none;
 }
 #links .col-md-6 a.social i
 {
     font-size: 1.5rem;
     margin-right: 2%;
+}
+.bi-linkedin:hover
+{
+    color: #0077B5;
+}
+.bi-facebook:hover
+{
+    color: #4267B2;
+}
+.bi-instagram:hover
+{
+    color: #BC2A8D;
+}
+.bi-twitter:hover
+{
+    color: #55ACEE;
 }
 .copy
 {
@@ -248,6 +271,10 @@ h3
     {
         border: 0;
         border-bottom: 1px solid;
+    }
+    #links .social + br
+    {
+        display: none;
     }
 }
 @media screen and (max-width: 400px)
