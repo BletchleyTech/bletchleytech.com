@@ -1,3 +1,4 @@
 # Bletchley Inc. 
 
-This is the GitHub repository for the [Bletchley Inc. website](https://bletchleyinc.com)
+This is the GitHub repository for the Bletchley Inc. website.
+<!-- This is the GitHub repository for the [Bletchley Inc. website](https://bletchleyinc.com) -->
