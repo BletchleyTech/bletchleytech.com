@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/web", (req, res) => {
-    res.send("<h1>Web Development</h1>");
+    res.sendFile(`${__dirname}/web.html`);
 });
 
 router.get("/app", (req, res) => {
