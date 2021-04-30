@@ -158,6 +158,7 @@ h2
 #app
 {
     background-image: url("./../images/app.jpg");
+    background-position: right center;
 }
 #app button, #enterprise button
 {
