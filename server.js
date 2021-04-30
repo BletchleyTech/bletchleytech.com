@@ -1,6 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const about = require("./about/about");
 const services = require("./services/services");
+const contact = require("./contact/contact");
+const error = require("./error/error");
 const app = express();
 const port = 3000;
 
@@ -11,26 +14,16 @@ app.get("/", (req, res) => {
     res.sendFile(`${__dirname}/index.html`);
 });
 
-app.get("/about", (req, res) => {
-    res.sendFile(`${__dirname}/about.html`);
-});
+app.use("/about", about);
 
 app.use("/services", services);
 
-app.get("/contact", (req, res) => {
-    res.sendFile(`${__dirname}/contact.html`);
-});
+app.use("/contact", contact);
 
-app.post("/contact", (req, res) => {
-    res.send(req.body);
-});
-
-app.use("/robots.txt", (req, res) => {
+app.all("/robots.txt", (req, res) => {
     res.sendFile(`${__dirname}/robots.txt`);
 });
 
-app.use("/", (req, res) => {
-    res.sendFile(`${__dirname}/error.html`);
-});
+app.use(["/", "/about", "/services", "/contact"], error);
 
 app.listen(port);
