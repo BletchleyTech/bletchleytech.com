@@ -102,10 +102,13 @@ h1
     color: #FFFFFF;
     opacity: 0;
 }
+#web, #game, #vr
+{
+    color: #FFFFFF;
+}
 #web
 {
     background-image: url("./../images/web.jpg");
-    color: #FFFFFF;
 }
 .service
 {
@@ -164,11 +167,14 @@ h2
 #game
 {
     background-image: url("./../images/game.jpg");
-    color: #FFFFFF;
 }
 #enterprise
 {
     background-image: url("./../images/enterprise.jpg");
+}
+#vr
+{
+    background-image: url("./../images/vr.jpg");
 }
 #links
 {
