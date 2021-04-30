@@ -313,7 +313,7 @@ h3
     {
         font-size: 1.2rem;
     }
-    #links .col-md-6 a, address
+    #links .col-md-6 p, #links .col-md-6 a, address
     {
         font-size: 1rem;
     }

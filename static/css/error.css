@@ -112,10 +112,22 @@ h2
     bottom: 5%;
     transform: translateX(-50%);
     border-radius: 10px;
+    transition: all 0.3s ease-out;
 }
 #title > button:hover
 {
     background-color: #FFFFFF;
     color: #000000;
     font-weight: 600;
+}
+@media screen and (max-width: 300px)
+{
+    h1
+    {
+        font-size: 2.5rem;
+    }
+    h2
+    {
+        font-size: 1.5rem;
+    }
 }
