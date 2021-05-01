@@ -12,7 +12,7 @@ router.get("/web", (req, res) => {
 });
 
 router.get("/app", (req, res) => {
-    res.send("<h1>App Development</h1>");
+    res.sendFile(`${__dirname}/app.html`);
 });
 
 router.get("/game", (req, res) => {
