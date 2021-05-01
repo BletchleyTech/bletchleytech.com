@@ -1,103 +1,11 @@
-section
-{
-    position: relative;
-    min-height: 100vh;
-    height: auto;
-    padding: 2%;
-    max-width: 100vw;
-}
-#title
-{
-    background-color: #000000;
-    padding: 0;
-    color: #FFFFFF;
-}
-nav.navbar
-{
-    padding: 1% 2%;
-    background-color: #000000;
-    font-family: 'Syne';
-    border-bottom: 1px solid #FFFFFF;
-}
-nav.navbar .navbar-brand
-{
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    margin-right: 0;
-}
-nav.navbar a
-{
-    padding: 0;
-}
-nav.navbar button
-{
-    border: 0;
-}
-nav.navbar button:focus
-{
-    box-shadow: none;
-}
-.bi-list
-{
-    font-size: 2rem;
-}
-nav.navbar #navbar .navbar-nav
-{
-    margin-left: auto;
-}
-nav.navbar #navbar .navbar-nav .nav-link
-{
-    color: #FFFFFF;
-    font-size: 1.2rem;
-}
-nav.navbar .navbar-brand, nav.navbar #navbar .navbar-nav .nav-link
-{
-    display: inline-block;   
-    position: relative;
-}
-nav.navbar .navbar-brand::after, nav.navbar #navbar .navbar-nav .nav-link::after
-{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    width: 100%;
-    height: 2px;
-    transform-origin: bottom left;
-    background-color: #FFFFFF;
-    transition: transform 0.2s ease-out;
-}
-nav.navbar #navbar .navbar-nav .nav-link::after
-{
-    transform-origin: bottom right;
-}
-nav.navbar .navbar-brand:hover::after, nav.navbar #navbar .navbar-nav .nav-link:hover::after
-{
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
 h1
 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Syne';
-    font-size: 4rem;
-    font-weight: 700;
     text-align: center;
     width: 100%;
-}
-.bi-arrow-down-short
-{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 4%;
-    font-size: 3.5rem;
-    color: #FFFFFF;
-    opacity: 0;
 }
 #about
 {
@@ -105,9 +13,6 @@ h1
 }
 #about, #clients
 {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     color: #000000;
 }
 #about .text p
@@ -120,47 +25,11 @@ h1
 #why
 {
     background-image: url("./../images/why.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     color: #FFFFFF;
-}
-.text
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-.service
-{
-    margin: 0;
-    text-align: center;
-    font-family: 'Spartan';
-    font-weight: 700;
-    width: 100%;
-    font-size: 1.1rem;
 }
 #why .service
 {
     color: #AAAAAA;
-}
-h2
-{
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 3rem;
-}
-.text p
-{
-    width: 60%;
-    margin: 0 auto 1%;
-    font-size: 1.5rem;
-    font-family: 'Podkova';
-    line-height: 1.1;
 }
 #clients
 {
@@ -169,89 +38,6 @@ h2
 #clients .service
 {
     color: #555555;
-}
-#links
-{
-    min-height: auto;
-    padding: 2% 5%;
-    font-family: 'Syne';
-}
-#links .row
-{
-    padding: 1% 0;
-    border-bottom: 1px solid;
-}
-h3
-{
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-bottom: 3%;
-}
-#links .col-md-6:first-of-type a
-{
-    display: block;
-    margin-bottom: 1%;
-}
-#links .col-md-6:first-of-type
-{
-    border-right: 1px solid;
-}
-#links .col-md-6:first-of-type a
-{
-    text-decoration: none;
-}
-#links .col-md-6 p
-{
-    margin-bottom: 0;
-}
-#links .col-md-6 p, #links .col-md-6 a, address
-{
-    font-size: 1.2rem;
-    color: inherit;
-}
-#links .col-md-6 a.social i
-{
-    font-size: 1.5rem;
-    margin-right: 2%;
-}
-#links .col-md-6 a.social
-{
-    text-decoration: none;
-}
-.copy
-{
-    padding-top: 2%;
-    margin-bottom: 0;
-    text-align: center;
-    font-family: 'Spartan';
-    font-weight: 700;
-}
-.bi-linkedin:hover
-{
-    color: #0077B5;
-}
-.bi-facebook:hover
-{
-    color: #4267B2;
-}
-.bi-instagram:hover
-{
-    color: #BC2A8D;
-}
-.bi-twitter:hover
-{
-    color: #55ACEE;
-}
-@keyframes down
-{
-    from {
-        opacity: 0;
-        bottom: 4%;
-    } to {
-        opacity: 1;
-        bottom: 1%;
-    }
 }
 @media screen and (max-width: 991px)
 {
@@ -265,19 +51,6 @@ h3
     #about .text p
     {
         width: 80%;
-    }
-    #links .col-md-6
-    {
-        padding: 3% 1%;
-    }
-    #links .col-md-6:first-of-type
-    {
-        border: 0;
-        border-bottom: 1px solid;
-    }
-    #links .social + br
-    {
-        display: none;
     }
 }
 @media screen and (max-width: 550px)
@@ -305,51 +78,13 @@ h3
 }
 @media screen and (max-width: 400px)
 {
-    h1
-    {
-        font-size: 3rem;
-    }
     #about .text p
     {
         font-size: 1.5rem;
     }
-    h2
-    {
-        font-size: 2.2rem;
-    }
-    .service
-    {
-        font-size: 0.9rem;
-    }
-    .text p
-    {
-        font-size: 1.3rem;
-        margin-bottom: 3%;
-        width: 75%;
-    }
-    h3
-    {
-        font-size: 1.2rem;
-    }
-    #links .col-md-6
-    {
-        padding: 3%;
-    }
-    #links .col-md-6 p, #links .col-md-6 a, address
-    {
-        font-size: 1rem;
-    }
-    .copy
-    {
-        padding-top: 3%;
-    }
 }
 @media screen and (max-width: 300px)
 {
-    h1
-    {
-        font-size: 2.5rem;
-    }
     h2
     {
         margin: 0 auto 5%;
@@ -361,14 +96,6 @@ h3
 }
 @media screen and (max-width: 230px)
 {
-    h1
-    {
-        font-size: 2rem;
-    }
-    .bi-arrow-down-short
-    {
-        font-size: 3rem;
-    }
     #about .text p
     {
         font-size: 1.3rem;
