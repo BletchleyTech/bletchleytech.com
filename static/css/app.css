@@ -1,0 +1,21 @@
+h1
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+#intro
+{
+    background-image: url("./../images/app/intro.jpg");
+    color: #FFFFFF;
+}
+#intro .text p
+{
+    padding: 3%;
+    font-family: 'Jura';
+    font-size: 2.5rem;
+    font-weight: 700;
+}
