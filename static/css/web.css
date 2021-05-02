@@ -243,6 +243,10 @@ h1
     {
         padding-top: 5%;
     }
+    .card
+    {
+        width: 95%;
+    }
     .list-group-item
     {
         width: 90%;
