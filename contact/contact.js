@@ -1,12 +1,13 @@
 const express = require("express");
+const path = require("path");
 const bodyParser = require("body-parser");
 const router = express.Router();
 
-router.use(express.static(`${__dirname}/../static`));
+router.use(express.static(path.join(__dirname, "..", "static")));
 router.use(bodyParser.urlencoded({extended: true}));
 
 router.get("/", (req, res) => {
-    res.sendFile(`${__dirname}/contact.html`);
+    res.sendFile(path.join(__dirname, "contact.html"));
 });
 
 router.post("/success", (req, res) => {

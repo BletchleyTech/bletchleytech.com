@@ -1,18 +1,19 @@
 const express = require("express");
+const path = require("path");
 const router = express.Router();
 
-router.use(express.static(`${__dirname}/../static`));
+router.use(express.static(path.join(__dirname, "..", "static")));
 
 router.get("/", (req, res) => {
-    res.sendFile(`${__dirname}/services.html`);
+    res.sendFile(path.join(__dirname, "services.html"));
 });
 
 router.get("/web", (req, res) => {
-    res.sendFile(`${__dirname}/web.html`);
+    res.sendFile(path.join(__dirname, "web.html"));
 });
 
 router.get("/app", (req, res) => {
-    res.sendFile(`${__dirname}/app.html`);
+    res.sendFile(path.join(__dirname, "app.html"));
 });
 
 router.get("/game", (req, res) => {
