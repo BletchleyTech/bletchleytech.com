@@ -1,0 +1,29 @@
+#title button
+{
+    position: absolute;
+    padding: 0.5rem 1.5rem;
+    font-family: 'Spartan';
+    bottom: 5%;
+    border-radius: 10px;
+    margin: 0 1%;
+}
+#title > a button
+{
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    right: 50%;
+    transition: all 0.3s ease-out;
+}
+#title > a button:hover, #title > button
+{
+    background-color: #FFFFFF;
+    color: #000000;
+    font-weight: 600;
+}
+#title > button
+{
+    border: 0;
+    left: 50%;
+    transform: none;
+}

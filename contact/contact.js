@@ -10,8 +10,19 @@ router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "contact.html"));
 });
 
-router.post("/success", (req, res) => {
+router.post("/", (req, res) => {
     res.send(req.body);
+});
+
+router.get("/success", (req, res) => {
+    res.send("Subscribed");
+});
+
+router.get("/failure", (req, res) => {
+    console.log("failure");
+    res.render("failure", {
+        message: error
+    });
 });
 
 module.exports = router;
