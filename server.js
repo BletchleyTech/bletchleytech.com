@@ -6,9 +6,10 @@ const services = require("./services/services");
 const contact = require("./contact/contact");
 const error = require("./error/error");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, "static")));
+app.set("view engine", "pug");
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
@@ -27,4 +28,6 @@ app.all("/robots.txt", (req, res) => {
 
 app.use(error);
 
-app.listen(port);
+app.listen(port, () => {
+    console.log(`Bletchley Inc. app listening on port ${port}`);
+});
