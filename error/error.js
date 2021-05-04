@@ -9,7 +9,7 @@ router.use((req, res) => {
 });
 
 router.use((req, res) => {
-    res.status(500).sendFile(`${__dirname}/500.html`);
+    res.status(500).sendFile(path.join(__dirname, "500.html"));
 });
 
 module.exports = router;
