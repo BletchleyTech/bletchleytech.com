@@ -1,0 +1,51 @@
+extends layout.pug 
+
+block meta
+    <meta name="title" content="Contact - Bletchley Inc.">
+    <meta name="description" content="Contact Us - Bletchley Inc. Interested in our services? Feel free to contact us through the form below or at the links at the bottom of the page. We'll be sure to get back at you as soon as possible.">
+    <meta name="keywords" content="">
+    <title>Contact - Bletchley Inc.</title>
+
+block styles
+    <link rel="stylesheet" href="css/contact.css">
+
+block title
+    <h1></h1>
+    <a href="#contact">
+        <i class="bi-arrow-down-short"></i>
+    </a>
+
+block body 
+    <section class="container-fluid" id="contact">
+        <h2>Get in touch</h2>
+        <form method="POST" action="/contact">
+            <article class="row">
+                <aside class="col-md-6">
+                    <label for="fname" class="form-label">First Name <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="fname" name="fname" placeholder="John" required>
+                    <label for="lname" class="form-label">Last Name <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="lname" name="lname" placeholder="Doe" required>
+                    <label for="email" class="form-label">Email <span class="required">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com" required aria-describedby="emailText">
+                    <p id="emailText" class="form-text">We'll only use this email to get back at you</p>
+                    <label for="service" class="form-label">I'm interested in <span class="required">*</span></label>
+                    <select id="service" class="form-select" name="service" required>
+                        <option value="Web">Web Development</option>
+                        <option value="App">App Development</option>
+                        //- <option value="Game">Game Development</option>
+                        //- <option value="Enterprise">Enterprise Apps</option>
+                        //- <option value="VR">VR Development</option>
+                        //- <option value="General">General Information</option>
+                    </select>
+                </aside>
+                <aside class="col-md-6">
+                    <label for="message" class="form-label">Message <span class="required">*</span></label>
+                    <textarea rows="9" class="form-control" name="message" placeholder="I'm interested in your [service] package. I'm looking to set up a [type of software], and ..." required></textarea>
+                    <input type="submit" class="btn btn-light" name="submit" value="Submit">
+                </aside>
+            </article>
+        </form>
+    </section>
+
+block scripts 
+    script(src="js/contact.js") 

@@ -1,0 +1,38 @@
+extends layout.pug
+
+block meta
+    <meta name="title" content="Bletchley Inc.">
+    <meta name="description" content="Bletchley Inc. is a software development startup focused on creating effective and efficient software programs, apps and utilities to enhance user experience and generate faster and better results in tech-related businesses all around the world.">
+    <meta name="keywords" content="">
+    <title>Bletchley Inc.</title>
+
+block styles 
+    link(rel="stylesheet", href="css/index.css")
+
+block title
+    <article class="row">
+        <aside class="col-lg-6">
+            <h1></h1>
+        </aside>
+        <aside class="col-lg-6">
+            <p><em><strong><span class="josefin">Quality</span></strong></em> Software<br>Made <em><strong><span class="josefin">Affordable</span></strong></em></p>
+        </aside>
+    </article>
+    <a href="#purpose">
+        <i class="bi-arrow-down-short"></i>
+    </a>
+
+block body 
+    <section class="container-fluid" id="purpose">
+        <p class="service">Software Development</p>
+        <article class="text">
+            <h2>Software with Purpose</h2>
+            <p>Reach the horizon with software services and products designed and developed to be as efficient and effective as possible</p>
+            <a href="/services" title="Services at Bletchley">
+                <button>Learn More</button>
+            </a>
+        </article>
+    </section>
+
+block scripts
+    script(src="js/index.js") 

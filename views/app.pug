@@ -1,0 +1,94 @@
+extends layout.pug
+
+block meta
+    <meta name="title" content="App Development - Bletchley Inc.">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>App Development - Bletchley Inc.</title>
+
+block styles 
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://kit.fontawesome.com/313f6b6c56.js" crossorigin="anonymous"></script>
+
+block title 
+    <h1></h1>
+    <a href="#intro">
+        <i class="bi-arrow-down-short"></i>
+    </a>
+
+block body
+    <section class="container-fluid" id="intro">
+        <article class="text">
+            <p>A mobile app is the best way to connect with your users and clients outside the Internet and provide them a memorable offline experience</p>
+        </article>
+    </section>
+    <section class="container-fluid" id="native">
+        <p class="service">Native App Development</p>
+        <article class="text">
+            <h2>Native App Development</h2>
+            <p>Bring your content to the biggest mobile marketplace with a native Android app, reach the most exclusive mobile community with an iOS native app, or have the biggest outreach possible with a native app for each mobile operating system</p>
+            <p class="icons">
+                <i class="fab fa-java fa-3x"></i>
+                <i class="fab fa-swift fa-3x"></i>
+            </p>
+        </article>
+    </section>
+    <section class="container-fluid" id="hybrid">
+        <p class="service">Hybrid App Development</p>
+        <article class="text">
+            <h2>Hybrid App Development</h2>
+            <p>Get all the benefits of reaching over 90% of the world's mobile users, all with a single rapid, concise and developer-friendly codebase that can be deployed to Android and iOS smartphones at the same time.</p>
+            <p class="icons">
+                <i class="fab fa-react fa-3x"></i>
+            </p>
+        </article>
+    </section>
+    <section class="container-fluid" id="pricing">
+        <h2>Pricing</h2>
+        <article class="row">
+            <aside class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Native Development</h3>
+                        <p><span class="price">$12.99</span>/hr</p>
+                    </div>
+                    <div class="card-body">
+                        <p>The Native App Development package includes deveopment in the following languages as per requested:</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Java 14 (Android)</li>
+                            <li class="list-group-item">Swift 5 (iOS)</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/contact/?service=app#contact">
+                            <button>I'm interested</button>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+            <aside class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Hybrid Development</h3>
+                        <p><span class="price">$19.99</span>/hr</p>
+                    </div>
+                    <div class="card-body">
+                        <p>The Hybrid App Development package include development in the following languages:</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Flutter</li>
+                            <li class="list-group-item">React Native</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/contact/?service=app#contact">
+                            <button>I'm interested</button>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </article>
+    </section>
+
+block scripts 
+    script(src="js/app.js") 
+    script(src="js/icons.js") 

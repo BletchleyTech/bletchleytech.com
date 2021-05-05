@@ -5,15 +5,15 @@ const router = express.Router();
 router.use(express.static(path.join(__dirname, "..", "static")));
 
 router.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "services.html"));
+    res.render("services");
 });
 
 router.get("/web", (req, res) => {
-    res.sendFile(path.join(__dirname, "web.html"));
+    res.render("web");
 });
 
 router.get("/app", (req, res) => {
-    res.sendFile(path.join(__dirname, "app.html"));
+    res.render("app");
 });
 
 // router.get("/game", (req, res) => {

@@ -1,0 +1,41 @@
+extends layout.pug 
+
+block meta 
+    <meta name="title" content="About - Bletchley Inc.">
+    <meta name="description" content="About Bletchley. Bletchley Inc. is a colombian software development startup focused on creating effective and efficient software programs, apps and utilities to enhance user experience and generate faster and better results in tech-related businesses all around the world.">
+    <meta name="keywords" content="">
+    <title>About - Bletchley Inc.</title>
+
+block styles
+    <link rel="stylesheet" href="css/about.css">
+
+block title 
+    <h1></h1>
+    <a href="#about">
+        <i class="bi-arrow-down-short"></i>
+    </a>
+
+block body 
+    <section class="container-fluid" id="about">
+        <p class="service">About Bletchley</p>
+        <article class="text">
+            <p>Bletchley Inc. is a colombian software development startup focused on creating effective and efficient software programs, apps and utilities to enhance user experience and generate faster and better results in tech-related businesses all around the world.</p>
+        </article>
+    </section>
+    <section class="container-fluid" id="why">
+        <p class="service">Why Bletchley</p>
+        <article class="text">
+            <h2>Quality is the Standard</h2>
+            <p>At Bletchley, quality is a given in every project we take on. No matter the length, size, or complexity of the project, we follow best practices and quality guidelines to achieve the best product possible</p>
+        </article>
+    </section>
+    <section class="container-fluid" id="clients">
+        <p class="service">Client Policy</p>
+        <article class="text">
+            <h2>Partners. Not clients</h2>
+            <p>Our clients are not just clients. They're partners. We work closely with them to deeply understand their software needs and create a solution that meets and exceeds those needs</p>
+        </article>
+    </section>
+
+block scripts 
+    script(src="js/about.js") 

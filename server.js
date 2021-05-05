@@ -13,7 +13,7 @@ app.set("view engine", "pug");
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.render("index");
 });
 
 app.use("/about", about);

@@ -15,7 +15,7 @@ router.use(express.static(path.join(__dirname, "..", "static")));
 router.use(bodyParser.urlencoded({extended: true}));
 
 router.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "contact.html"));
+    res.render("contact");
 });
 
 router.post("/", (req, res) => {
