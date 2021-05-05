@@ -12,7 +12,8 @@
     "url": "git+https://github.com/Jorge644240/Bletchley.git"
   },
   "author": "Jorge Gallego",
-  "license": "ISC",
+  "license": "UNLICENSED",
+  "private": true,
   "bugs": {
     "url": "https://github.com/Jorge644240/Bletchley/issues"
   },
