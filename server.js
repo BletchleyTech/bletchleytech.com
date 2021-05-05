@@ -28,6 +28,4 @@ app.all("/robots.txt", (req, res) => {
 
 app.use(error);
 
-app.listen(port, () => {
-    console.log(`Bletchley Inc. app listening on port ${port}`);
-});
+app.listen(port);
