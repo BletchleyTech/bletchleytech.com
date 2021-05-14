@@ -1,6 +1,6 @@
 {
   "name": "bletchley",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "NodeJS/ExpressJS web application for the Bletchley Inc. website at bletchleyinc.com",
   "main": "server.js",
   "scripts": {
