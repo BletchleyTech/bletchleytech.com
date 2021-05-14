@@ -1,6 +1,6 @@
 const icons = () => {
     for (let icon of document.querySelectorAll(".icons i")) {
-        if (window.innerWidth < 300) {
+        if (window.innerWidth < 400) {
             icon.classList.replace("fa-3x", "fa-2x")
         } else {
             if (icon.classList.contains("fa-2x"))
@@ -11,6 +11,6 @@ const icons = () => {
     }
 }
 
-document.onload = icons;
+window.onload = icons;
 
 window.onresize = icons;
