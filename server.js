@@ -1,6 +1,5 @@
 const express = require("express");
 const path = require("path");
-const bodyParser = require("body-parser");
 const about = require("./about/about");
 const services = require("./services/services");
 const contact = require("./contact/contact");
@@ -10,7 +9,6 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, "static")));
 app.set("view engine", "pug");
-app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
     res.render("index");
