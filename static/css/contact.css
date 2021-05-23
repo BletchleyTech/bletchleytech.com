@@ -37,7 +37,7 @@ input.form-control, select.form-select, textarea.form-control
 {
     background-color: #202020;
     color: #FFFFFF;
-    width: 70%;
+    width: 80%;
 }
 input.form-control:focus, select.form-select:focus, textarea.form-control:focus
 {
@@ -92,13 +92,13 @@ input[type="submit"]:focus
     {
         padding: 8% 5%;
     }
-}
-@media screen and (max-width: 300px)
-{
     input.form-control, select.form-select, textarea.form-control
     {
         width: 95%;
     }
+}
+@media screen and (max-width: 300px)
+{
     input[type="submit"]
     {
         padding: 2% 5%;
