@@ -1,0 +1,113 @@
+h1
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+.bi-arrow-down-short
+{
+    animation: down 3s infinite;
+}
+#faq > article
+{
+    width: 80%;
+    margin: 2% auto;
+}
+h3.question
+{
+    font-family: 'Lexend';
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #DDDDDD;
+    color: #000000;
+    cursor: pointer;
+    padding: 1%;
+    transition: 0.1s linear;
+    text-align: left;
+    margin: 0;
+}
+h3.question:hover, h3.question.active
+{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+aside.answer
+{
+    display: none;
+    transition: all 0.2s linear;
+    font-family: 'Exo';
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+h3.question.active + aside.answer
+{
+    background-color: #DDDDDD;
+    color: #000000;
+    display: block;
+    padding: 2%;
+}
+aside.answer p
+{
+    margin-bottom: 0;
+}
+aside.answer p a
+{
+    color: inherit;
+}
+#faq > article .list-group-flush .list-group-item
+{
+    background-color: inherit;
+    text-align: center;
+}
+@media screen and (max-width: 991px)
+{
+    #faq > article
+    {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    #faq > article
+    {
+        width: 95%;
+    }
+    h3.question
+    {
+        /* padding: 1%; */
+        font-size: 1.2rem;
+    }
+    aside.answer
+    {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 400px)
+{
+    #faq > article
+    {
+        width: 100%;
+        text-align: center;
+    }
+    h3.question
+    {
+        font-size: 1rem;
+        text-align: center;
+        padding: 3% 1%;
+    }
+    h3.question.active + aside.answer
+    {
+        font-size: 0.9rem;
+        padding: 5% 2%;
+    }
+}
+@media screen and (max-width: 300px)
+{
+    h2
+    {
+        font-size: 1.8rem;
+    }
+}

@@ -20,6 +20,10 @@ app.use("/services", services);
 
 app.use("/contact", contact);
 
+app.all("/faq", (req, res) => {
+    res.render("faq");
+});
+
 app.all("/robots.txt", (req, res) => {
     res.sendFile(path.join(__dirname, "robots.txt"));
 });
