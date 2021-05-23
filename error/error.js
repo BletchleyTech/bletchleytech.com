@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.use(express.static(path.join(__dirname, "..", "static")));
 
-router.use((req, res) => {
+router.use("/", (req, res) => {
     res.status(404).sendFile(path.join(__dirname, "404.html"));
 });
 
