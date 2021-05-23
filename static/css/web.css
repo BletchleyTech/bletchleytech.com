@@ -96,7 +96,6 @@ h1
 .card h3
 {
     text-align: center;
-    font-family: 'Montserrat';
     font-size: 2rem;
     font-weight: 400;
 }
@@ -257,6 +256,10 @@ h1
 }
 @media screen and (max-width: 400px)
 {
+    h1
+    {
+        font-size: 2rem;
+    }
     #intro .text p
     {
         font-size: 1.5rem;
@@ -292,10 +295,6 @@ h1
 }
 @media screen and (max-width: 345px)
 {
-    h1
-    {
-        font-size: 2rem;
-    }
     .bi-arrow-down-short
     {
         font-size: 3rem;
