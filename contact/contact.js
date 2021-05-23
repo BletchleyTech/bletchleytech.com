@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const client = require("@mailchimp/mailchimp_marketing");
+const nodemailer = require("nodemailer");
 const router = express.Router();
 
 client.setConfig({
@@ -60,6 +61,24 @@ router.post("/", (req, res) => {
         }
     };
     run();
+    const sender = 'gallegojorge908@gmail.com';
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: sender,
+            pass: 'ztpjjeltirtfhtdz'
+        }
+    });
+    const mail = {
+        from: sender,
+        to: email,
+        subject: 'Nodemailer Test',
+        text: 'You sent an email using Nodemailer'
+    };
+    transporter.sendMail(mail, (error, info) => {
+        if (error) console.log(error);
+        else console.log(`Email sent: ${info.response}`);
+    });
 });
 
 router.get("/success", (req, res) => {
