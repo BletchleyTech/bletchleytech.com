@@ -48,6 +48,7 @@ h3.question.active + aside.answer
     color: #000000;
     display: block;
     padding: 2%;
+    text-align: justify;
 }
 aside.answer p
 {
@@ -56,6 +57,12 @@ aside.answer p
 aside.answer p a
 {
     color: inherit;
+}
+#faq > article .list-group-flush
+{
+    width: 70%;
+    margin: 2% auto;
+    font-size: 1rem;
 }
 #faq > article .list-group-flush .list-group-item
 {
