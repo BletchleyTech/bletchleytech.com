@@ -72,3 +72,7 @@ const form = () => {
 document.querySelector(".bi-arrow-down-short").addEventListener("click", form);
 
 form();
+
+window.onbeforeunload = () => {
+    return "";
+}
