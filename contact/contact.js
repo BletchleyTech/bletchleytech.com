@@ -72,8 +72,8 @@ router.post("/", (req, res) => {
     const mail = {
         from: sender,
         to: email,
-        subject: 'Nodemailer Test',
-        text: 'You sent an email using Nodemailer'
+        subject: 'Thanks for your interest',
+        text: 'At Bletchley Inc. we appreciate your interest in our services.\n\nWe will now got through the information you submitted and get back to you as soon as possible.\n\nWe look forward to working with your in the near future.\n\nRegards,\nThe Bletchley Inc. team'
     };
     transporter.sendMail(mail, (error, info) => {
         if (error) console.log(error);

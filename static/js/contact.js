@@ -76,3 +76,7 @@ form();
 window.onbeforeunload = () => {
     return "";
 }
+
+document.querySelectorAll("input:last-of-type")[1].addEventListener("click", () => { 
+    window.onbeforeunload = {}; 
+});

@@ -21,13 +21,23 @@ h1
     font-family: 'Jura';
     font-size: 2rem;
     font-weight: 700;
-}
+}   
 #why
 {
     background-image: url("./../images/why.jpg");
     color: #FFFFFF;
 }
-#why .service
+#mission, #vision
+{
+    background-position-y: bottom;
+}
+#mission
+{
+    background-image: url("./../images/mission.jpg");
+    /* background-position: center bottom; */
+    color: #FFFFFF;
+}
+#why .service, #mission .service
 {
     color: #AAAAAA;
 }
@@ -35,7 +45,11 @@ h1
 {
     background-image: url("./../images/clients.jpg");
 }
-#clients .service
+#vision
+{
+    background-image: url("./../images/vision.jpg");
+}
+#clients .service, #vision .service
 {
     color: #555555;
 }

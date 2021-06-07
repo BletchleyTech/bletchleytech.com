@@ -1,15 +1,13 @@
 const express = require("express");
-const path = require("path");
 const router = express.Router();
 
-router.use(express.static(path.join(__dirname, "..", "static")));
-
-router.use("/", (req, res) => {
-    res.status(404).sendFile(path.join(__dirname, "404.html"));
+router.use("*/", (req, res) => {
+    res.status(404).render("404");
 });
 
-router.use((req, res) => {
-    res.status(500).sendFile(path.join(__dirname, "500.html"));
+router.use((error, req, res, next) => {
+    res.status(500).render("500");
+    console.error(error);
 });
 
 module.exports = router;

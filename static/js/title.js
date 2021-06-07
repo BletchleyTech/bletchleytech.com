@@ -11,4 +11,6 @@ const title = () => {
     }
 }
 
-title();
+try {
+    title();
+} catch (e) {}

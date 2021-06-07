@@ -166,6 +166,12 @@ h3
 {
     display: block;
     margin-bottom: 1%;
+    transition: all 0.1s linear;
+}
+#links .col-md-6:first-of-type a:hover
+{
+    border-left: 2px solid;
+    padding-left: 2%;
 }
 #links .col-md-6:first-of-type
 {
