@@ -20,15 +20,15 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    const first = req.body.fname, last = req.body.lname, email = req.body.email, service = req.body.service, message = req.body.message;
+    const name = req.body.name, company = req.body.company, email = req.body.email, service = req.body.service, message = req.body.message;
     var new_client = {
         members: [
             {
                 email_address: email,
                 status: "subscribed",
                 merge_fields: {
-                    FNAME: first,
-                    LNAME: last,
+                    NAME: name,
+                    COMPANY: company,
                     SERVICE: service,
                     MESSAGE: message
                 }
