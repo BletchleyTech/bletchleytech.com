@@ -25,7 +25,6 @@ h3.question
     color: #000000;
     cursor: pointer;
     padding: 1%;
-    transition: 0.1s linear;
     text-align: left;
     margin: 0;
 }

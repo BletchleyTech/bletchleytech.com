@@ -1,28 +1,41 @@
-h1, h2, p
+.center
 {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
-    font-weight: 400;
+    padding: 0 2%;
+}
+.center i
+{
+    font-size: 3.5rem;
 }
 h1
 {
     font-family: 'Montserrat';
-    bottom: 50%;
+    font-weight: 600;
 }
 h2
 {
     font-family: 'Spartan';
-    top: 50%;
+    font-weight: 400;
     font-size: 2rem;
 }
-p
+#title > p
 {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: 'Lato';
-    font-size: 1.5rem;
-    bottom: 5%;
+    font-size: 1.2rem;
+}
+#title > p a
+{
+    text-decoration: underline;
+    cursor: pointer;
 }
 @media screen and (max-width: 400px)
 {

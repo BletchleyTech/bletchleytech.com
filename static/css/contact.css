@@ -18,7 +18,7 @@ form
 }
 #contact .col-md-6 
 {
-    padding: 5% 3%;
+    padding: 3%;
 }
 label
 {
@@ -51,6 +51,12 @@ input.form-control:focus, select.form-select:focus, textarea.form-control:focus
     margin-bottom: 0;
     color: #DDDDDD;
 }
+.form-text.error
+{
+    padding: 0 1% 1%;
+    color: #FF0000;
+    animation: text 1.5s ease-in-out;
+}
 input[type="submit"]
 {
     margin-top: 5%;
@@ -60,6 +66,11 @@ input[type="submit"]
 input[type="submit"]:focus
 {
     box-shadow: none;
+}
+@keyframes text
+{
+    from {background-color: #FF0000;color:#FFFFFF;}
+    to {background-color:transparent;color:#FF0000;}
 }
 @media screen and (max-width: 991px)
 {
