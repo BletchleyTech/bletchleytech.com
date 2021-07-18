@@ -5,14 +5,14 @@ const form = () => {
     {
         const services = 
         {
-            "web": [0, 
+            "web": [1, 
                 {
                     front: "I'm interested in your Front End Web Development service.",
                     back: "I'm interested in your Back End Web Development service.",
                     full: "I'm interested in your Full Stack Web Development service.",
                     default: "I'm interested in your Front End/Back End/Full Stack (choose one) Web Development service."
                 }
-            ], "app": [1, 
+            ], "app": [2, 
                 {
                     native: "I'm interested in your Native App Development service.",
                     hybrid: "I'm interested in your Hybrid App Development service.",

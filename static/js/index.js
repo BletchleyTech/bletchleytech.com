@@ -1,5 +1,5 @@
 let i = 0;
-const text = 'Bletchley Inc.';
+const text = 'Bletchley Tech';
 
 const title = () => {
     if (i < text.length) {
@@ -7,11 +7,11 @@ const title = () => {
         i++;
         setTimeout(title, 300);
     }
-    if (document.querySelector("h1").innerHTML == text) {
+    if (document.querySelector("h1").innerText == text) {
         document.querySelector("#title p").classList.add("fade");
         document.querySelector("#title p").style.opacity = 1;
         setTimeout(() => {
-            document.querySelector("#title .bi-arrow-down-short").style.animation = "down 3s infinite";
+            document.querySelector("#title .bi-arrow-down-short").style.animation = "down 2.5s infinite linear";
         }, 500);
     }
 }
