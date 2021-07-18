@@ -1,51 +1,46 @@
 extends layout.pug 
 
 block meta
-    <meta name="title" content="Contact - Bletchley Inc.">
-    <meta name="description" content="Contact Us - Bletchley Inc. Interested in our services? Feel free to contact us through the form below or at the links at the bottom of the page. We'll be sure to get back at you as soon as possible.">
-    <meta name="keywords" content="">
-    <title>Contact - Bletchley Inc.</title>
+    meta(name="description", content="Contact Us - Bletchley Tech. Interested in our services? Feel free to contact us through the form below or at the links at the bottom of the page. We'll be sure to get back at you as soon as possible.")
+    meta(name="description", content="")
 
-block styles
-    <link rel="stylesheet" href="css/contact.css">
+block styles 
+    link(rel="stylesheet", href="/css/contact.css")
 
-block title
-    <h1></h1>
-    <a href="#contact">
-        <i class="bi-arrow-down-short"></i>
-    </a>
+block title 
+    h1 
+    a(href="#contact") 
+        i.bi-arrow-down-short
 
 block body 
-    <section class="container-fluid" id="contact">
-        <h2>Get in touch</h2>
-        <form method="POST" action="/contact">
-            <article class="row">
-                <aside class="col-md-6">
-                    <label for="name" class="form-label">Name <span class="required">*</span></label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
-                    <label for="company" class="form-label">Company</label>
-                    <input type="text" class="form-control" id="company" name="company" placeholder="Bletchley Inc.">
-                    <label for="email" class="form-label">Email <span class="required">*</span></label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com" required aria-describedby="emailText">
-                    <p id="emailText" class="form-text">We'll only use this email to get back at you</p>
-                    <label for="service" class="form-label">I'm interested in <span class="required">*</span></label>
-                    <select id="service" class="form-select" name="service" required>
-                        <option value="Web">Web Development</option>
-                        <option value="App">App Development</option>
-                        //- <option value="Game">Game Development</option>
-                        //- <option value="Enterprise">Enterprise Apps</option>
-                        //- <option value="VR">VR Development</option>
-                        <option value="General">General Information</option>
-                    </select>
-                </aside>
-                <aside class="col-md-6">
-                    <label for="message" class="form-label">Message <span class="required">*</span></label>
-                    <textarea rows="9" class="form-control" name="message" placeholder="I'm interested in your [service] package. I'm looking to set up a [type of software], and ..." required></textarea>
-                    <input type="submit" class="btn btn-light" name="submit" value="Submit">
-                </aside>
-            </article>
-        </form>
-    </section>
+    section.container-fluid#contact
+        h2 Get in touch 
+        form(action="/contact", method="POST")
+            article.row 
+                aside.col-md-6 
+                    label.form-label(for="name") Name
+                        span.required *
+                    input.form-control#name(type="text", name="name", placeholder="John Doe", required, value=data.name?data.name:"")
+                    label.form-label(for="company") Company 
+                    input.form-control#company(type="text", name="company", placeholder="Google", value=data.company?data.company:"")
+                    label.form-label(for="email") Email
+                        span.required *
+                    input.form-control#email(type="email", name="email", placeholder="example@email.com", required, aria-describedby="emailText")
+                    p.form-text#emailText(class=data.email?"error":"") #{data.email?data.email:"We'll only use this email to get back at you"}
+                    label.form-label(for="service") I'm interested in 
+                        span.required *
+                    select.form-select#service(name="service", required)
+                        option(value="Information") General Information
+                        option(value="Web") Web Development 
+                        option(value="App") App Development 
+                        option(value="Game") Game Development 
+                        option(value="Enterprise") Enterprise Apps 
+                        option(value="VR") VR Development   
+                aside.col-md-6 
+                    label.form-label(for="message") Message 
+                        span.required *
+                    textarea.form-control#message(name="message", cols="30", rows="9", value=data.message?data.message:"I'm interested in your [service] package. I'm looking to set up a [type of software], and ...", required) 
+                    input.btn.btn-light(type="submit", name="submit", value="Submit")
 
 block scripts 
-    script(src="js/contact.js") 
+    script(src="/js/contact.js") 

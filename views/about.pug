@@ -1,52 +1,42 @@
 extends layout.pug 
 
-block meta 
-    <meta name="title" content="About - Bletchley Inc.">
-    <meta name="description" content="About Bletchley. Bletchley Inc. is a colombian software development startup focused on creating effective and efficient software programs, apps and utilities to enhance user experience and generate faster and better results in tech-related businesses all around the world.">
-    <meta name="keywords" content="">
-    <title>About - Bletchley Inc.</title>
+block meta
+    meta(name="description", content="About Bletchley. Bletchley Inc. is a colombian software development startup focused on creating effective and efficient software programs, apps and utilities to enhance user experience and generate faster and better results in tech-related businesses all around the world.")
+    meta(name="keywords", content="")
 
-block styles
-    <link rel="stylesheet" href="css/about.css">
+block styles 
+    link(rel="stylesheet", href="/css/about.css")
 
 block title 
-    <h1></h1>
-    <a href="#about">
-        <i class="bi-arrow-down-short"></i>
-    </a>
+    h1 
+    a(href="#about") 
+        i.bi-arrow-down-short 
 
 block body 
-    <section class="container-fluid" id="about">
-        <p class="service">About Bletchley</p>
-        <article class="text">
-            <p>Bletchley Inc. is a colombian software development startup focused on creating effective and efficient software programs, apps and utilities to enhance user experience and generate faster and better results in tech-related businesses all around the world.</p>
-        </article>
-    </section>
-    <section class="container-fluid" id="why">
-        <p class="service">Why Bletchley</p>
-        <article class="text">
-            <h2>Quality is the Standard</h2>
-            <p>At Bletchley, quality is a given in every project we take on. No matter the length, size, or complexity of the project, we follow best practices and quality guidelines to achieve the best product possible</p>
-        </article>
-    </section>
-    <section class="container-fluid" id="clients">
-        <p class="service">Client Relationship</p>
-        <article class="text">
-            <h2>Partners. Not clients</h2>
-            <p>Our clients are not just clients. They're partners. We work closely with them to deeply understand their software needs and create a solution that meets and exceeds those needs</p>
-        </article>
-    </section>
+    section.container-fluid#about 
+        p.service About Bletchley 
+        article.text 
+            p Bletchley Tech is a colombian software development startup focused on creating effective and efficient software programs, apps and utilities to enhance user experience and generate faster and better results in tech-related businesses all around the world.
+    section.container-fluid#why 
+        p.service Why Bletchley 
+        article.text 
+            h2 Quality is the Standard
+            p At Bletchley, quality is a given in every project we take on. No matter the length, size, or complexity of the project, we follow best practices and quality guidelines to achieve the best product possible
+    section.container-fluid#clients 
+        p.service Client Relationship 
+        article.text 
+            h2 Partners. Not Clients
+            p Our clients are not just clients. They're partners. We work closely with them to deeply understand their software needs and create a solution that meets and exceeds those needs
     section.container-fluid#mission 
         p.service Mission 
         article.text
             h2 Mission 
-            p At Bletchley, we aim to create high-quality, secure and scalable software solutions at affordable prices, making it possible for all sorts of startups to compete with big enterprises in the digital arena and bringing the ditgital world closer to everyone, everywhere. 
-            //- p Insofar Bletchley's existence has been shaped by the world around it, it's mission has always stayed the same. We are bound to provide high-quality technological solutions regarding information technologies, software and hardware development, engineering and R+D (Research and Development), programming, and all-around Computer Science (CS) such that it is accessible to anyone, anytime, anywhere.
-    section.container-fluid#vision  
-        p.service Vision 
+            p At Bletchley, we aim to create high-quality, secure and scalable software solutions at affordable prices, making it possible for all sorts of startups to compete with big enterprises in the digital arena and bringing the ditgital world closer to everyone, everywhere.
+    section.container-fluid#vision 
+        p.service Vision
         article.text 
             h2 Vision 
             p At Bletchley, we strive to make the digital world available to everyone as we create a community of innovators and entrepeneurs bent on creating groundbreaking solutions to all sorts of inconvenients.
 
 block scripts 
-    script(src="js/about.js") 
+    script(src="/js/about.js") 

@@ -1,49 +1,13 @@
-<!DOCTYPE html>
+extends layout.pug 
 
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Jorge Gallego">
-        <meta name="title" content="Page Not Found - Bletchley Inc.">
-        <title>Page Not Found - Bletchley Inc.</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/imports.css">
-        <link rel="stylesheet" href="css/error.css">
-        <link rel="stylesheet" href="css/500.css">
-    </head>
-    <body>
-        <section class="container-fluid" id="title">
-            <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-                <a href="/" class="navbar-brand">Bletchley Inc.</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="bi-list"></i>
-                </button>
-                <article class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="/about" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/services" class="nav-link">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/contact" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-                </article>
-            </nav>
-            <h1>We're sorry</h1>
-            <h2>
-                Something broke down on our side
-                <br>
-                We'll be back soon
-            </h2>
-            <a href="/">
-                <button>Homepage</button>
-            </a>
-            <button onclick="window.history.back();">Go Back</button>
-        </section>
-    </body>
-</html>
+block styles 
+    link(rel="stylesheet", href="/css/success.css")
+
+block title 
+    article.center 
+        h1 We're sorry 
+        h2 There was a problem with the server 
+    p You can 
+        a(onclick="window.history.back();") go back
+        |  or go to our 
+        a(onclick="window.href.location='/';") homepage

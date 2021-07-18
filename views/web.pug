@@ -1,128 +1,99 @@
 extends layout.pug 
 
 block meta
-    <meta name="title" content="Web Development - Bletchley Inc.">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <title>Web Development - Bletchley Inc.</title>
+    meta(name="description", content="")
+    meta(name="keywords", content="")
 
 block styles 
-    <link rel="stylesheet" href="css/web.css">
-    <script src="https://kit.fontawesome.com/313f6b6c56.js" crossorigin="anonymous"></script>
+    link(rel="stylesheet", href="/css/web.css")
+    script(src="https://kit.fontawesome.com/313f6b6c56.js", crossorigin="anonymous")
 
-block title
-    <h1></h1>
-    <a href="#intro">
-        <i class="bi-arrow-down-short"></i>
-    </a>
+block title 
+    h1 
+    a(href="#intro") 
+        i.bi-arrow-down-short 
 
-block body
-    <section class="container-fluid" id="intro">
-        <article class="text">
-            <p>In today's world, a noticeable website is the key to a strong web presence that leads to constant growth, more clients and increased revenues, whether it's a small business or a large corporation</p>
-        </article>
-    </section>
-    <section class="container-fluid" id="front">
-        <p class="service">Front-End Development</p>
-        <article class="text">
-            <h2>Front-End Development</h2>
-            <p>We work with the best tools in the market to create stunning websites that engage users and constantly attract new visitors, always following Accessibility Guidelines and Best Practices</p>
-            <p class="icons">
-                <i class="fab fa-vuejs fa-3x"></i>
-                <i class="fab fa-angular fa-3x"></i>
-                <i class="fab fa-react fa-3x"></i>
-            </p>
-        </article>
-    </section>
-    <section class="container-fluid" id="back">
-        <p class="service">Back-End Development</p>
-        <article class="text">
-            <h2>Back-End Development</h2>
-            <p>We create a web server's logic with the best technologies and frameworks available and the latest features and utilities of each to ensure a website's correct functioning around the clock</p>
-            <p class="icons">
-                <i class="fab fa-python fa-3x"></i>
-                <i class="fab fa-node-js fa-3x"></i>
-                <i class="fab fa-laravel fa-3x"></i>
-            </p>
-        </article>
-    </section>
-    <section class="container-fluid" id="full">
-        <p class="service">Full Stack Development</p>
-        <article class="text">
-            <h2>Full Stack Development</h2>
-            <p>We combine the best tools for both Front-End and Back-End Development to produce beautiful, full-fledged websites suited for medium-to-large businesses that continuously draw in clients</p>
-            <p class="icons">
-                <i class="fab fa-vuejs fa-3x"></i>
-                <i class="fab fa-node-js fa-3x"></i>
-                <i class="fab fa-angular fa-3x"></i>
-                <i class="fab fa-laravel fa-3x"></i>
-            </p>
-        </article>
-    </section>
-    <section class="container-fluid" id="pricing">
-        <h2>Pricing</h2>
-        <article class="row">
-            <aside class="col-sm-12">
-                <div class="card front">
-                    <div class="card-header">
-                        <h3>Front-End Development</h3>
-                        <p><span class="price">$9.99</span>/hr</p>
-                    </div>
-                    <div class="card-body">
-                        <p>The Front-End Development package includes development in the following languages and tools:</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">HTML5/CSS3</li>
-                            <li class="list-group-item">JS/ES6</li>
-                            <li class="list-group-item">React/Vue/Angular</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <button>I'm interested</button>
-                    </div>
-                </div>
-            </aside>
-            <aside class="col-sm-12">
-                <div class="card back">
-                    <div class="card-header">
-                        <h3>Back-End Development</h3>
-                        <p><span class="price">$14.99</span>/hr</p>
-                    </div>
-                    <div class="card-body">
-                        <p>The Back-End Development package includes development in the following languages and tools as per your request:</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Python (Flask/Django)</li>
-                            <li class="list-group-item">JavaScript (Node-Express)</li>
-                            <li class="list-group-item">PHP (Laravel)</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <button>I'm interested</button>
-                    </div>
-                </div>
-            </aside>
-            <aside class="col-sm-12">
-                <div class="card full">
-                    <div class="card-header">
-                        <h3>Full Stack Development</h3>
-                        <p><span class="price">$19.99</span>/hr</p>
-                    </div>
-                    <div class="card-body">
-                        <p>The Full Stack Development package includes development in the Front-End and Back-End languages and tools you choose:</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">HTML5/CSS3/JS</li>
-                            <li class="list-group-item">React/Vue/Angular</li>
-                            <li class="list-group-item">Django/NodeJS</li>
-                            <li class="list-group-item">Database Integration</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <button>I'm interested</button>
-                    </div>
-                </div>
-            </aside>
-        </article>
-    </section>
+block body 
+    section.container-fluid#intro 
+        article.text 
+            p In today's world, a noticeable website is the key to a strong web presence that leads to constant growth, more clients and increased revenues, whether it's a small business or a large corporation
+    section.container-fluid#front 
+        p.service Front-End Development 
+        article.text 
+            h2 Front-End Development 
+            p We work with the best tools in the market to create stunning websites that engage users and constantly attract new visitors, always following Accessibility Guidelines and Best Practices
+            p.icons 
+                i.fab.fa-vuejs.fa-3x 
+                i.fab.fa-angular.fa-3x 
+                i.fab.fa-react.fa-3x 
+    section.container-fluid#back
+        p.service Back-End Development 
+        article.text 
+            h2 Back-End Development
+            p We create a web server's logic with the best technologies and frameworks available and the latest features and utilities of each to ensure a website's correct functioning around the clock
+            p.icons 
+                i.fab.fa-python.fa-3x
+                i.fab.fa-node-js.fa-3x
+                i.fab.fa-laravel.fa-3x
+    section.container-fluid#full 
+        p.service Full Stack Development 
+        article.text 
+            h2 Full Stack Development 
+            p We combine the best tools for both Front-End and Back-End Development to produce beautiful, full-fledged websites suited for medium-to-large businesses that continuously draw in clients
+            p.icons 
+                i.fab.fa-vuejs.fa-3x 
+                i.fab.fa-node-js.fa-3x 
+                i.fab.fa-angular.fa-3x
+                i.fab.fa-python.fa-3x
+    section.container-fluid#pricing 
+        h2 Pricing
+        article.row 
+            aside.col-sm-12 
+                .card.front
+                    .card-header 
+                        h3 Front-End Development
+                        p
+                            span.price $9.99
+                            | /hr
+                    .card-body 
+                        p The Front-End Development package includes development in the following languages and tools:
+                        ul.list-group.list-group-flush 
+                            li.list-group-item HTML5/CSS3
+                            li.list-group-item JS/ES6
+                            li.list-group-item React/Vue/Angular
+                    .card-footer 
+                        button I'm interested
+            aside.col-sm-12 
+                .card.back
+                    .card-header 
+                        h3 Back-End Development
+                        p
+                            span.price $14.99
+                            | /hr
+                    .card-body 
+                        p The Back-End Development package includes development in the following languages and tools as per your request:
+                        ul.list-group.list-group-flush 
+                            li.list-group-item Python (Flask/Django)
+                            li.list-group-item JavaScript (Node-Express)
+                            li.list-group-item PHP (Laravel)
+                    .card-footer 
+                        button I'm interested
+            aside.col-sm-12 
+                .card.full
+                    .card-header 
+                        h3 Full Stack Development
+                        p
+                            span.price $9.99
+                            | /hr
+                    .card-body 
+                        p The Full Stack Development package includes development in the Front-End and Back-End languages and tools you choose:
+                        ul.list-group.list-group-flush 
+                            li.list-group-item HTML5/CSS3/JS
+                            li.list-group-item React/Vue/Angular
+                            li.list-group-item Django/NodeJS
+                    .card-footer 
+                        button I'm interested
 
 block scripts 
-    script(src="js/web.js") 
-    script(src="js/icons.js") 
+    script(src="/js/web.js") 
+    script(src="/js/icons.js") 

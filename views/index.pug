@@ -1,38 +1,36 @@
 extends layout.pug
 
 block meta
-    <meta name="title" content="Bletchley Inc.">
-    <meta name="description" content="Bletchley Inc. is a software development startup focused on creating effective and efficient software programs, apps and utilities to enhance user experience and generate faster and better results in tech-related businesses all around the world.">
-    <meta name="keywords" content="">
-    <title>Bletchley Inc.</title>
+    meta(name="description", content="Bletchley Inc. is a software development startup focused on creating effective and efficient software programs, apps and utilities to enhance user experience and generate faster and better results in tech-related businesses all around the world.")
+    meta(name="keywords", content="")
 
 block styles 
-    link(rel="stylesheet", href="css/index.css")
+    link(rel="stylesheet", href="/css/index.css")
 
-block title
-    <article class="row">
-        <aside class="col-lg-6">
-            <h1></h1>
-        </aside>
-        <aside class="col-lg-6">
-            <p><em><strong><span class="josefin">Quality</span></strong></em> Software<br>Made <em><strong><span class="josefin">Affordable</span></strong></em></p>
-        </aside>
-    </article>
-    <a href="#purpose">
-        <i class="bi-arrow-down-short"></i>
-    </a>
+block title 
+    article.row 
+        aside.col-lg-6 
+            h1 
+        aside.col-lg-6 
+            p 
+                em 
+                    strong.josefin Quality 
+                | Software 
+                br
+                | Made 
+                em 
+                    strong.josefin Affordable 
+    a(href="#purpose") 
+        i.bi-arrow-down-short
 
 block body 
-    <section class="container-fluid" id="purpose">
-        <p class="service">Software Development</p>
-        <article class="text">
-            <h2>Software with Purpose</h2>
-            <p>Reach the horizon with software services and products designed and developed to be as efficient and effective as possible</p>
-            <a href="/services" title="Services at Bletchley">
-                <button>Learn More</button>
-            </a>
-        </article>
-    </section>
+    section.container-fluid#purpose 
+        p.service Software Development
+        article.text 
+            h2 Software with Purpose 
+            p Reach the horizon with software services designed and developed to be as efficient and effective as possible
+            a(href="/services", title="Services at Bletchley") 
+                button Learn More
 
-block scripts
-    script(src="js/index.js") 
+block scripts 
+    script(src="/js/index.js") 

@@ -1,19 +1,16 @@
-extends layout.pug
+extends layout.pug 
 
 block meta
-    <meta name="title" content="Frequently Asked Questions - Bletchley Inc.">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <title>Frequently Asked Questions - Bletchley Inc.</title>
+    meta(name="description", content="")
+    meta(name="keywords", content="")
 
-block styles
-    <link rel="stylesheet" href="css/faq.css">
+block styles 
+    link(rel="stylesheet", href="/css/faq.css")
 
 block title 
-    <h1>Frequently Asked Questions</h1>
-    <a href="#faq">
-        <i class="bi-arrow-down-short"></i>
-    </a>
+    h1 Frequently Asked Questions 
+    a(href="#faq")
+        i.bi-arrow-down-short
 
 block body 
     section.container-fluid#faq
