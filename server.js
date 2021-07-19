@@ -35,6 +35,18 @@ app.all("/robots.txt", (req, res) => {
     res.sendFile(path.join(__dirname, "robots.txt"));
 });
 
+app.all("/sitemap.xml", (req, res) => {
+    res.sendFile(path.join(__dirname, "sitemap.xml"));
+});
+
+app.use(["*/robots.txt", "*/robots"], (req, res) => {
+    res.redirect("/robots.txt");
+});
+
+app.use(["*/sitemap.xml", "*/sitemap"], (req, res) => {
+    res.redirect("/sitemap.xml");
+});
+
 app.use(error);
 
 app.listen(port);
