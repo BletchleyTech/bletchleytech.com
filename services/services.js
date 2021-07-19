@@ -4,16 +4,24 @@ const router = express.Router();
 
 router.use(express.static(path.join(__dirname, "..", "static")));
 
+const name = "Bletchley Technological Solutions Inc.";
+
 router.get("/", (req, res) => {
-    res.render("services");
+    res.render("services", {
+        title: `Services - ${name}`
+    });
 });
 
 router.get("/web", (req, res) => {
-    res.render("web");
+    res.render("web", {
+        title: `Web Development - ${name}`
+    });
 });
 
 router.get("/app", (req, res) => {
-    res.render("app");
+    res.render("app", {
+        title: `App Development - ${name}`
+    });
 });
 
 // router.get("/game", (req, res) => {

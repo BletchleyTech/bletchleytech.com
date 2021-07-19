@@ -5,13 +5,18 @@ const services = require("./services/services");
 const contact = require("./contact/contact");
 const error = require("./error/error");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 app.use(express.static(path.join(__dirname, "static")));
 app.set("view engine", "pug");
+// app.set("views", "templates");
+
+const name = "Bletchley Technological Solutions Inc.";
 
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("index", {
+        title: name
+    });
 });
 
 app.use("/about", about);
@@ -21,7 +26,9 @@ app.use("/services", services);
 app.use("/contact", contact);
 
 app.all("/faq", (req, res) => {
-    res.render("faq");
+    res.render("faq", {
+        title: `Frequently Asked Questions - ${name}`
+    });
 });
 
 app.all("/robots.txt", (req, res) => {
