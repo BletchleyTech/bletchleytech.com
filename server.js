@@ -5,7 +5,7 @@ const services = require("./services/services");
 const contact = require("./contact/contact");
 const error = require("./error/error");
 const app = express();
-const port = 3000;
+const port = 3012;
 
 app.use(express.static(path.join(__dirname, "static")));
 app.set("view engine", "pug");
