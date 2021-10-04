@@ -1,0 +1,32 @@
+extends layout.pug 
+
+block meta
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+
+block styles 
+    link(rel="stylesheet", href="/css/game.css")
+    link(rel="stylesheet", href="/css/pricing.css")
+
+block title 
+    h1 
+    a(href="#intro")
+        i.bi-arrow-down-short 
+
+block body 
+    section.container-fluid.game#intro
+        article.text 
+            p Join the leading entertainment community in the world with a custom, tailor made videogame that can reach millions of people around the globe
+    section.container-fluid#mobile 
+        p.service Mobile Game Development 
+        article.text 
+            h2 Mobile Game Development
+            p Reach an ever-expanding global gaming market and give your users a memorable experience at the touch of their fingertips through a mobile game for Android and/or iOS
+    section.container-fluid#desktop 
+        p.service Desktop Game Development 
+        article.text 
+            h2 Desktop Game Development 
+            p Provide millions of players around the world with an incredible gaming experience from the comfort of a personal computer
+
+block scripts 
+    script(src="/js/game.js") 

@@ -1,19 +1,6 @@
-h1
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-}
 #about
 {
     background-image: url("./../images/about.jpg");
-}
-#about, #clients
-{
-    color: #000000;
 }
 #about .text p
 {
@@ -25,7 +12,6 @@ h1
 #why
 {
     background-image: url("./../images/why.jpg");
-    color: #FFFFFF;
 }
 #mission, #vision
 {
@@ -34,10 +20,12 @@ h1
 #mission
 {
     background-image: url("./../images/mission.jpg");
-    /* background-position: center bottom; */
+}
+#why, #mission, #team
+{
     color: #FFFFFF;
 }
-#why .service, #mission .service
+#why .service, #mission .service, #team .service
 {
     color: #AAAAAA;
 }
@@ -52,6 +40,10 @@ h1
 #clients .service, #vision .service
 {
     color: #555555;
+}
+#team
+{
+    background-image: url('./../images/team.jpg');
 }
 @media screen and (max-width: 991px)
 {

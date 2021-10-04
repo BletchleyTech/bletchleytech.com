@@ -4,12 +4,37 @@ const bodyParser = require("body-parser");
 const client = require("@mailchimp/mailchimp_marketing");
 const nodemailer = require("nodemailer");
 const existence = require("email-existence");
+const { connect, Schema, model } = require("mongoose");
 const router = express.Router();
 
 client.setConfig({
-    apiKey: '57b28f035527ac42e62255b01ecbf650-us1',
+    apiKey: 'c7ba6d7a16df78da5d4400c5b4318b8a-us1',
     server: 'us1'
 });
+
+connect('mongodb://localhost:27017/bletchley');
+
+const contactSchema = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    company: String,
+    email: {
+        type: String,
+        required: true
+    },
+    service: {
+        type: String,
+        required: true
+    },
+    message: {
+        type: String,
+        required: true
+    }
+});
+
+const Contact = new model('Contact', contactSchema);
 
 router.use(express.static(path.join(__dirname, "..", "static")));
 router.use(bodyParser.urlencoded({extended: true}));
@@ -21,6 +46,7 @@ var data = {};
 router.get("/", (req, res) => {
     res.render("contact", {
         title: `Contact Us - ${name}`,
+        path: "/contact",
         data: data
     });
     data = {};
@@ -53,9 +79,17 @@ router.post("/", (req, res) => {
                 ]
             };
             const run = async () => {
-                const response = await client.lists.batchListMembers('a45c3be319', new_client);
+                const response = await client.lists.batchListMembers('0c7be17030', new_client);
                 if (response.error_count === 0)
                 {
+                    const contact = new Contact({
+                        name: name,
+                        company: company,
+                        email: email,
+                        service: service,
+                        message: message
+                    });
+                    contact.save();
                     res.redirect("/contact/success");
                     const sender = 'gallegojorge908@gmail.com';
                     const transporter = nodemailer.createTransport({
@@ -125,13 +159,15 @@ router.post("/", (req, res) => {
 
 router.get("/success", (req, res) => {
     res.render("success", {
-        title: `Success - ${name}`
+        title: `Success - ${name}`, 
+        path: "/contact/success"
     });
 });
 
 router.get("/failure", (req, res) => {
     res.render("failure", {
-        title: `Failure - ${name}`
+        title: `Failure - ${name}`,
+        path: "/contact/failure"
     });
 });
 

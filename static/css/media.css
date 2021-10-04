@@ -30,6 +30,22 @@
 }
 @media screen and (max-width: 400px)
 {
+    nav.navbar .navbar-brand
+    {
+        font-size: 1.3rem;
+    }
+    nav.navbar .navbar-brand::after, nav.navbar #navbar .navbar-nav .nav-link::after
+    {
+        height: 0.1rem;
+    }
+    .bi-list
+    {
+        font-size: 1.8rem;
+    }
+    nav.navbar #navbar .navbar-nav .nav-link
+    {
+        font-size: 1rem;
+    }
     h1
     {
         font-size: 3rem;
@@ -59,9 +75,14 @@
     {
         font-size: 1rem;
     }
+    #links .col-md-6 a.social i
+    {
+        font-size: 1.34em;
+    }
     .copy
     {
         padding-top: 3%;
+        font-size: 0.8rem;
     }
 }
 @media screen and (max-width: 300px)

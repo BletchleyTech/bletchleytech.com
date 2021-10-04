@@ -9,13 +9,13 @@ const port = 3000;
 
 app.use(express.static(path.join(__dirname, "static")));
 app.set("view engine", "pug");
-// app.set("views", "templates");
 
 const name = "Bletchley Technological Solutions Inc.";
 
 app.get("/", (req, res) => {
     res.render("index", {
-        title: name
+        title: name, 
+        path: "/"
     });
 });
 
@@ -27,7 +27,8 @@ app.use("/contact", contact);
 
 app.all("/faq", (req, res) => {
     res.render("faq", {
-        title: `Frequently Asked Questions - ${name}`
+        title: `Frequently Asked Questions - ${name}`,
+        path: "/faq"
     });
 });
 
@@ -39,11 +40,11 @@ app.all("/sitemap.xml", (req, res) => {
     res.sendFile(path.join(__dirname, "sitemap.xml"));
 });
 
-app.use(["*/robots.txt", "*/robots"], (req, res) => {
+app.all(["*/robots.txt", "*/robots"], (req, res) => {
     res.redirect("/robots.txt");
 });
 
-app.use(["*/sitemap.xml", "*/sitemap"], (req, res) => {
+app.all(["*/sitemap.xml", "*/sitemap"], (req, res) => {
     res.redirect("/sitemap.xml");
 });
 

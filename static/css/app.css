@@ -1,12 +1,3 @@
-h1
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-}
 #intro
 {
     background-image: url("./../images/app/intro.jpg");
@@ -53,100 +44,11 @@ h1
 {
     background-image: url("./../images/app/pricing.jpg");
 }
-.card
-{
-    border: 1px solid #000000;
-    padding: 2%;
-    width: 55%;
-    margin: 2% auto;
-    background-color: rgba(250, 250, 250, 0.5);
-    color: #000000;
-    transition: all 0.3s ease-out;
-}
-.card:hover
-{
-    background-color: rgba(250, 250, 250, 0.8);
-    box-shadow: 0 0 1.5rem #CCCCCC;
-    transform: scale(1.1);
-}
-.card > *
-{
-    background: none;
-}
-.card-header
-{
-    border-bottom: 1px solid #000000;
-}
-.card h3
-{
-    text-align: center;
-    font-family: 'Montserrat';
-    font-size: 2rem;
-    font-weight: 400;
-}
-.card-header p
-{
-    font-family: 'Montserrat';
-    margin: 0;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-.card .price
-{
-    font-family: 'Spartan';
-    font-size: 1.5rem;
-}
-.card-body
-{
-    font-family: 'Syne';
-    font-size: 1.2rem;
-}
-.card-footer
-{
-    border-top: 1px solid #000000;
-    text-align: center;
-    padding-top: 3%;
-}
-.card button
-{
-    border: 1px solid #000000;
-    background-color: transparent;
-    color: #000000;
-    padding: 1% 3%;
-    border-radius: 10px;
-    text-transform: capitalize;
-    transition: all 0.2s ease-out;
-}
-.card button:hover
-{
-    color: #FFFFFF;
-    background-color: #000000;
-}
-.col-sm-12:last-of-type .card button
-{
-    background-color: #000000;
-    color: #FFFFFF;
-}
-.list-group-item
-{
-    background-color: transparent;
-    color: inherit;
-    text-align: center;
-    border-bottom: 1px solid;
-    width: 60%;
-    padding: .5rem 0;
-    margin: 0 auto;
-}
 @media screen and (max-width: 991px)
 {
     #intro .text p
     {
         width: 70%;
-    }
-    .card
-    {
-        width: 65%;
     }
 }
 @media screen and (max-width: 767px)
@@ -154,30 +56,6 @@ h1
     #intro .text p
     {
         width: 80%;
-    }
-    .card
-    {
-        width: 75%;
-    }
-    .card h3
-    {
-        font-size: 1.5rem;
-    }
-    .card-header p
-    {
-        font-size: 1rem;
-    }
-    .card .price
-    {
-        font-size: 1.2rem;
-    }
-    .card-body
-    {
-        font-size: 1.1rem;
-    }
-    .list-group-item
-    {
-        width: 70%;
     }
 }
 @media screen and (max-width: 550px)
@@ -199,22 +77,6 @@ h1
     {
         font-size: 2.2rem;
     }
-    .text button
-    {
-        font-size: 0.9rem;
-    }
-    .card
-    {
-        width: 85%;
-    }
-    .card:hover
-    {
-        transform: none;
-    }
-    .list-group-item
-    {
-        width: 80%;
-    }
     h3
     {
         font-size: 1.2rem;
@@ -234,38 +96,18 @@ h1
     {
         font-size: 1.8rem;
     }
-    .card-body
-    {
-        font-size: 1rem;
-    }
 }
 @media screen and (max-width: 400px)
 {
+    h1
+    {
+        font-size: 2rem;
+    }
     #intro .text p
     {
         font-size: 1.5rem;
     }
     .text p
-    {
-        width: 90%;
-    }
-    #pricing
-    {
-        padding-top: 5%;
-    }
-    .card
-    {
-        width: 95%;
-    }
-    .card-footer
-    {
-        padding-top: 5%;
-    }
-    .card-footer button
-    {
-        padding: 2% 5%;
-    }
-    .list-group-item
     {
         width: 90%;
     }
@@ -276,10 +118,6 @@ h1
 }
 @media screen and (max-width: 345px)
 {
-    h1
-    {
-        font-size: 2rem;
-    }
     .bi-arrow-down-short
     {
         font-size: 3rem;

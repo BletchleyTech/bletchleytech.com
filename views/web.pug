@@ -6,6 +6,7 @@ block meta
 
 block styles 
     link(rel="stylesheet", href="/css/web.css")
+    link(rel="stylesheet", href="/css/pricing.css")
     script(src="https://kit.fontawesome.com/313f6b6c56.js", crossorigin="anonymous")
 
 block title 
@@ -14,7 +15,7 @@ block title
         i.bi-arrow-down-short 
 
 block body 
-    section.container-fluid#intro 
+    section.container-fluid.web#intro 
         article.text 
             p In today's world, a noticeable website is the key to a strong web presence that leads to constant growth, more clients and increased revenues, whether it's a small business or a large corporation
     section.container-fluid#front 
@@ -56,11 +57,14 @@ block body
                             span.price $9.99
                             | /hr
                     .card-body 
-                        p The Front-End Development package includes development in the following languages and tools:
+                        p The Front-End Development package includes the following services:
                         ul.list-group.list-group-flush 
-                            li.list-group-item HTML5/CSS3
-                            li.list-group-item JS/ES6
-                            li.list-group-item React/Vue/Angular
+                            li.list-group-item Web Design (incl. UI/UX)
+                            li.list-group-item Design Implementation
+                            li.list-group-item Web App Front-End Creation 
+                                span.note *
+                                p.note * 
+                                    abbr(title="To be determined") TBD
                     .card-footer 
                         button I'm interested
             aside.col-sm-12 
@@ -71,11 +75,14 @@ block body
                             span.price $14.99
                             | /hr
                     .card-body 
-                        p The Back-End Development package includes development in the following languages and tools as per your request:
+                        p The Back-End Development package includes the following services:
                         ul.list-group.list-group-flush 
-                            li.list-group-item Python (Flask/Django)
-                            li.list-group-item JavaScript (Node-Express)
-                            li.list-group-item PHP (Laravel)
+                            li.list-group-item Database Design &amp; Administration
+                            li.list-group-item Web App Back-End Creation
+                            li.list-group-item API Design &amp; Integration
+                                span.note *
+                                p.note * 
+                                    abbr(title="To be determined") TBD
                     .card-footer 
                         button I'm interested
             aside.col-sm-12 
@@ -83,17 +90,22 @@ block body
                     .card-header 
                         h3 Full Stack Development
                         p
-                            span.price $9.99
+                            span.price $19.99
                             | /hr
                     .card-body 
-                        p The Full Stack Development package includes development in the Front-End and Back-End languages and tools you choose:
+                        p The Full Stack Development package includes the following services:
                         ul.list-group.list-group-flush 
-                            li.list-group-item HTML5/CSS3/JS
-                            li.list-group-item React/Vue/Angular
-                            li.list-group-item Django/NodeJS
+                            li.list-group-item Web Design and Implementation
+                            li.list-group-item Web App Creation
+                            li.list-group-item Database Design and Administration
+                            li.list-group-item API Design and Integration 
+                                span.note *
+                                p.note * 
+                                    abbr(title="To be determined") TBD
                     .card-footer 
                         button I'm interested
 
 block scripts 
     script(src="/js/web.js") 
+    script(src="/js/interest.js")
     script(src="/js/icons.js") 
