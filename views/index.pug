@@ -1,7 +1,7 @@
 extends layout.pug
 
 block meta
-    meta(name="description", content="Bletchley Inc. is a software development startup focused on creating effective and efficient software programs, apps and utilities to enhance user experience and generate faster and better results in tech-related businesses all around the world.")
+    meta(name="description", content="Bletchley Technological Solutions Inc. is a colombian software development startup focused on creating effective and efficient software programs, apps and utilities to enhance user experience and generate faster and better results in tech-related businesses all around the world.")
     meta(name="keywords", content="")
 
 block styles 
@@ -24,8 +24,15 @@ block title
         i.bi-arrow-down-short
 
 block body 
-    section.container-fluid#purpose 
-        p.service Software Development
+    section.container-fluid#about
+        p.service About Us
+        article.text 
+            h2 Our Origins 
+            p Bletchley Technological Solutions Inc. came to be as an attempt to eliminate the excessively high prices of software development services while providing the same high quality solutions
+            a(href="/services", title="About Bletchley")
+                button Learn More
+    section.container-fluid#services 
+        p.service Our Services
         article.text 
             h2 Software with Purpose 
             p Reach the horizon with software services designed and developed to be as cost efficient and time effective as possible
