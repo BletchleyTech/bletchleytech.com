@@ -2,6 +2,10 @@
 {
     animation: down 3s infinite;
 }
+#faq
+{
+    border-bottom: 1px solid;
+}
 #faq > article
 {
     width: 80%;
