@@ -16,6 +16,8 @@ h1
 {
     font-family: 'Montserrat';
     font-weight: 600;
+    position: static;
+    transform: translate(0, 0);
 }
 h2
 {
