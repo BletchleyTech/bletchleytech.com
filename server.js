@@ -1,9 +1,10 @@
 const express = require("express");
 const path = require("path");
-const about = require("./about/about");
-const services = require("./services/services");
-const contact = require("./contact/contact");
-const error = require("./error/error");
+const about = require("./routing/about");
+const services = require("./routing/services");
+const contact = require("./routing/contact");
+const files = require("./routing/files");
+const error = require("./routing/error");
 const app = express();
 const port = 3012;
 
@@ -25,28 +26,14 @@ app.use("/services", services);
 
 app.use("/contact", contact);
 
-app.all("/faq", (req, res) => {
+app.get("/faq", (req, res) => {
     res.render("faq", {
         title: `Frequently Asked Questions - ${name}`,
         path: "/faq"
     });
 });
 
-app.all("/robots.txt", (req, res) => {
-    res.sendFile(path.join(__dirname, "robots.txt"));
-});
-
-app.all("/sitemap.xml", (req, res) => {
-    res.sendFile(path.join(__dirname, "sitemap.xml"));
-});
-
-app.all(["*/robots.txt", "*/robots"], (req, res) => {
-    res.redirect("/robots.txt");
-});
-
-app.all(["*/sitemap.xml", "*/sitemap"], (req, res) => {
-    res.redirect("/sitemap.xml");
-});
+app.use(files);
 
 app.use(error);
 
