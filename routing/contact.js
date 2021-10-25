@@ -23,7 +23,7 @@ var data = {};
 router.get("/", (req, res) => {
     res.render("contact", {
         title: `Contact Us - ${name}`,
-        path: "/contact",
+        path: req.path,
         data: data
     });
     data = {};
@@ -137,14 +137,14 @@ router.post("/", (req, res) => {
 router.get("/success", (req, res) => {
     res.render("success", {
         title: `Success - ${name}`, 
-        path: "/contact/success"
+        path: req.path
     });
 });
 
 router.get("/failure", (req, res) => {
     res.render("failure", {
         title: `Failure - ${name}`,
-        path: "/contact/failure"
+        path: req.path
     });
 });
 

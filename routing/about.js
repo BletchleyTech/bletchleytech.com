@@ -9,14 +9,14 @@ const name = "Bletchley Technological Solutions Inc.";
 router.get("/", (req, res) => {
     res.render("about", {
         title: `About Us - ${name}`,
-        path: "/about"
+        path: req.path
     });
 });
 
 router.get("/team", (req, res) => {
     res.render("team", {
         title: `Our Team - ${name}`,
-        path: "/about/team"
+        path: req.path
     });
 });
 
