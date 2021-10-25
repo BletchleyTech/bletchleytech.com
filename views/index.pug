@@ -52,6 +52,13 @@ block body
             p At our young age, we have taken on small-scale, simple projects as well as complex, data-driven web applications, which goes to prove our ability to adapt and deliver high quality products regardless of the project.
             a(href="/clients", title="Our Clients")
                 button Learn More 
+    section.container-fluid#testimonials 
+        p.service Testimonials
+        each testimonial in testimonials
+            aside.testimonial 
+                p.quote 
+                    em "#{testimonial.quote}"
+                small.name - #{testimonial.name} #{testimonial.company?`, ${testimonial.company}`:''}
 
 
 block scripts 
