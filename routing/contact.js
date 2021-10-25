@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const client = require("@mailchimp/mailchimp_marketing");
 const nodemailer = require("nodemailer");
 const existence = require("email-existence");
-const { connect, Schema, model } = require("mongoose");
+const Contact = require("./../models/contact");
 require("dotenv").config();
 const router = express.Router();
 
@@ -12,30 +12,6 @@ client.setConfig({
     apiKey: process.env.MAILCHIMP,
     server: 'us1'
 });
-
-connect('mongodb://localhost:27017/bletchley');
-
-const contactSchema = new Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    company: String,
-    email: {
-        type: String,
-        required: true
-    },
-    service: {
-        type: String,
-        required: true
-    },
-    message: {
-        type: String,
-        required: true
-    }
-});
-
-const Contact = new model('Contact', contactSchema);
 
 router.use(express.static(path.join(__dirname, "..", "static")));
 router.use(bodyParser.urlencoded({extended: true}));
@@ -111,7 +87,7 @@ router.post("/", (req, res) => {
                                 </h1>
                                 <section style="padding:2% 1%;text-align:justify;font-size:1rem;">
                                     <p style="margin:0;">At Bletchley, we appreciate your interest in our services and your confidence in our abilities.</p>
-                                    <p style="margin:0;">As such, we will now go over the information you provided, review it, and get back at you with a response as soon as possible.</p>
+                                    <p style="margin:0;">As such, we will now go over the information you provided, review it, and get back to you with a response as soon as possible.</p>
                                     <p style="margin:0;">We are looking forward to working with you and helping your business grow</p>
                                 </section>
                                 <section style="font-weight:bold;font-family:sans-serif;padding:1%;border-top:1px solid;display:flex;flex-direction:column;flex-wrap:wrap;justify-content:space-between;align-items:center;">
