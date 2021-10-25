@@ -44,7 +44,7 @@
 {
     background-image: url("./../images/index/about.jpg");
 }
-#about button
+#about button, #blog button
 {
     background-color: #000000;
     color: #FFFFFF;
@@ -57,6 +57,10 @@
 #services .service
 {
     color: #AAAAAA;
+}
+#blog
+{
+    background-image: url('./../images/index/blog.jpg');
 }
 @keyframes fade
 {
