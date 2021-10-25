@@ -26,8 +26,4 @@ router.get("/faq", (req, res) => {
     });
 });
 
-router.get("/clients", (req, res) => {
-
-})
-
 module.exports = router;
