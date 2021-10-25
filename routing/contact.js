@@ -5,10 +5,11 @@ const client = require("@mailchimp/mailchimp_marketing");
 const nodemailer = require("nodemailer");
 const existence = require("email-existence");
 const { connect, Schema, model } = require("mongoose");
+require("dotenv").config();
 const router = express.Router();
 
 client.setConfig({
-    apiKey: 'c7ba6d7a16df78da5d4400c5b4318b8a-us1',
+    apiKey: process.env.MAILCHIMP,
     server: 'us1'
 });
 
@@ -113,7 +114,7 @@ router.post("/", (req, res) => {
                                     <p style="margin:0;">As such, we will now go over the information you provided, review it, and get back at you with a response as soon as possible.</p>
                                     <p style="margin:0;">We are looking forward to working with you and helping your business grow</p>
                                 </section>
-                                <section style="font-weight:bold;font-family:sans-serif;padding:1%;border-top:1px solid;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;">
+                                <section style="font-weight:bold;font-family:sans-serif;padding:1%;border-top:1px solid;display:flex;flex-direction:column;flex-wrap:wrap;justify-content:space-between;align-items:center;">
                                     <div>
                                         <p style="margin:0;font-size:0.9rem;">
                                             Bletchley Technological Solutions Inc.
