@@ -27,25 +27,25 @@ router.get("/app", (req, res) => {
     });
 });
 
-router.get("/game", (req, res) => {
-    res.render("game", {
-        title: `Game Development - ${name}`, 
-        path: req.path
-    });
-});
+// router.get("/game", (req, res) => {
+//     res.render("game", {
+//         title: `Game Development - ${name}`, 
+//         path: req.path
+//     });
+// });
 
-router.get("/enterprise", (req, res) => {
-    res.render("enterprise", {
-        title: `Enterprise Apps - ${name}`, 
-        path: req.path
-    });
-});
+// router.get("/enterprise", (req, res) => {
+//     res.render("enterprise", {
+//         title: `Enterprise Apps - ${name}`, 
+//         path: req.path
+//     });
+// });
 
-router.get("/vr", (req, res) => {
-    res.render("vr", {
-        title: `Virtual Reality - ${name}`,
-        path: req.path
-    });
-});
+// router.get("/vr", (req, res) => {
+//     res.render("vr", {
+//         title: `Virtual Reality - ${name}`,
+//         path: req.path
+//     });
+// });
 
 module.exports = router;
