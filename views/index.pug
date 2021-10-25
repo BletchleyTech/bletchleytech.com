@@ -43,7 +43,7 @@ block body
         article.text 
             h2 Weekly Insights 
             p At Bletchley, we prefer actions over words. That's why instead of just telling our clients what we're capable of, we decided to show them just how much we know and how much we can achieve when it comes to software.
-            a(href="https://softwaredevelopmentblog.net", title="Blog")
+            a(href="https://thewebdevelopmentblog.net", title="Blog")
                 button Learn More
     section.container-fluid#clients
         p.service Our Clients
@@ -52,13 +52,17 @@ block body
             p At our young age, we have taken on small-scale, simple projects as well as complex, data-driven web applications, which goes to prove our ability to adapt and deliver high quality products regardless of the project.
             a(href="/clients", title="Our Clients")
                 button Learn More 
-    section.container-fluid#testimonials 
-        p.service Testimonials
-        each testimonial in testimonials
-            aside.testimonial 
-                p.quote 
-                    em "#{testimonial.quote}"
-                small.name - #{testimonial.name} #{testimonial.company?`, ${testimonial.company}`:''}
+    if testimonials.length
+        section.container-fluid#testimonials 
+            h2 Testimonials
+            each testimonial in testimonials
+                aside.testimonial 
+                    p.quote 
+                        em "#{testimonial.quote}"
+                    small.name 
+                        strong - #{testimonial.name}#{testimonial.company?`, ${testimonial.company}`:''}
+        //- a(href="/testimonials", title="Testimonials")
+        //-     button See all 
 
 
 block scripts 

@@ -46,7 +46,7 @@
 {
     background-image: url("./../images/index/about.jpg");
 }
-#about button, #blog button
+#about button, #blog button, #testimonials button
 {
     background-color: #000000;
     color: #FFFFFF;
@@ -72,21 +72,51 @@
 #testimonials
 {
     border-bottom: 1px solid;
+    text-align: center;
+    min-height: auto;
 }
 aside.testimonial
 {
     width: 70%;
-    margin: 0 auto;
+    margin: 2% auto;
     border-bottom: 1px solid;
+    padding: 1%;
+}
+aside.testimonial:last-of-type
+{
+    border-bottom: none;
 }
 aside.testimonial .quote
 {
     font-family: 'Spartan';
+    margin-bottom: 1%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+aside.testimonial .name
+{
+    display: block;
+    text-align: right;
+    font-family: 'Montserrat';
+}
+#testimonials button
+{
+    border: 0;
+    border-radius: 10px;
+    padding: 0.5rem 1.5rem;
+    font-family: 'Syne';
 }
 @keyframes fade
 {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+@media screen and (max-width: 900px)
+{
+    aside.testimonial
+    {
+        width: 85%;
+    }
 }
 @media screen and (max-width: 400px)
 {
