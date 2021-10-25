@@ -1,4 +1,4 @@
-# Bletchley Inc. 
+# Bletchley Technological Solutions Inc. 
 
-This is the GitHub repository for the Bletchley Inc. website.
-<!-- This is the GitHub repository for the [Bletchley Inc. website](https://bletchleyinc.com) -->
+This is the GitHub repository for the Bletchley Technological Solutions Inc. website.
+<!-- This is the GitHub repository for the [Bletchley Technological Solutions Inc. website](https://bletchleytech.com) -->
