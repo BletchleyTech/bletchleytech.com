@@ -4,7 +4,7 @@
 }
 #web
 {
-    background-image: url("./../images/web.jpg");
+    background-image: url("./../images/services/web.jpg");
 }
 #web .service, #game .service, #vr .service
 {
@@ -12,7 +12,7 @@
 }
 #app
 {
-    background-image: url("./../images/app.jpg");
+    background-image: url("./../images/services/app.jpg");
     background-position: right center;
 }
 #app button, #enterprise button
@@ -22,13 +22,13 @@
 }
 #game
 {
-    background-image: url("./../images/game.jpg");
+    background-image: url("./../images/services/game.jpg");
 }
 #enterprise
 {
-    background-image: url("./../images/enterprise.jpg");
+    background-image: url("./../images/services/enterprise.jpg");
 }
 #vr
 {
-    background-image: url("./../images/vr.jpg");
+    background-image: url("./../images/services/vr.jpg");
 }

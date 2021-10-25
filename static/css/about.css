@@ -1,6 +1,6 @@
 #about
 {
-    background-image: url("./../images/about.jpg");
+    background-image: url("./../images/about/about.jpg");
 }
 #about .text p
 {
@@ -11,7 +11,7 @@
 }   
 #why
 {
-    background-image: url("./../images/why.jpg");
+    background-image: url("./../images/about/why.jpg");
 }
 #mission, #vision
 {
@@ -19,7 +19,7 @@
 }
 #mission
 {
-    background-image: url("./../images/mission.jpg");
+    background-image: url("./../images/about/mission.jpg");
 }
 #why, #mission, #team
 {
@@ -31,11 +31,11 @@
 }
 #clients
 {
-    background-image: url("./../images/clients.jpg");
+    background-image: url("./../images/about/clients.jpg");
 }
 #vision
 {
-    background-image: url("./../images/vision.jpg");
+    background-image: url("./../images/about/vision.jpg");
 }
 #clients .service, #vision .service
 {
@@ -43,7 +43,7 @@
 }
 #team
 {
-    background-image: url('./../images/team.jpg');
+    background-image: url('./../images/about/team.jpg');
 }
 @media screen and (max-width: 991px)
 {
