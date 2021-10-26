@@ -193,25 +193,27 @@ h3
 #links .col-md-6 a.social
 {
     text-decoration: none;
+    display: block;
+    transition: color 0.1s linear;
 }
 #links .col-md-6 a.social i
 {
     font-size: 1.5rem;
     margin-right: 2%;
 }
-.bi-linkedin:hover
+#links .col-md-6 a[title="LinkedIn"]:hover
 {
     color: #0077B5;
 }
-.bi-facebook:hover
+#links .col-md-6 a[title="Facebook"]:hover
 {
     color: #4267B2;
 }
-.bi-instagram:hover
+#links .col-md-6 a[title="Instagram"]:hover
 {
     color: #BC2A8D;
 }
-.bi-twitter:hover
+#links .col-md-6 a[title="Twitter"]:hover
 {
     color: #55ACEE;
 }
