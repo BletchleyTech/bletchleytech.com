@@ -1,5 +1,6 @@
 const { Schema, model } = require("mongoose");
 const encrypt = require("mongoose-encryption");
+require("dotenv").config();
 
 const adminSchema = new Schema({
     name: {

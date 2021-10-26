@@ -43,7 +43,35 @@ router.post("/", (req, res) => {
             res.cookie("admin", name, {
                 expires: new Date(Date.now() + 60_480_000),
                 httpOnly: true
-            })
+            });
+            res.redirect("/admin/dashboard");
         }
-    })
-})
+    });
+});
+
+router.get("/dashboard", (req, res) => {
+    if (req.cookies.admin) {
+        Admin.findOne({name: req.cookies.admin}, (err, admin) => {
+            if (err) {
+                console.error(err);
+                res.redirect("/error");
+            } else if (!admin) {
+                res.clearCookie("admin");
+                res.redirect("/admin");
+            } else {
+                res.render("dashboard", {
+                    title: `Admin Dashboard - ${name}`
+                })
+            }
+        });
+    } else {
+        res.redirect("/admin");
+    }
+});
+
+router.get("/logout", (req, res) => {
+    res.clearCookie("admin");
+    res.redirect("/");
+});
+
+module.exports = router;
