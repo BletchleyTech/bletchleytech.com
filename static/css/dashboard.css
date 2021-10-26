@@ -1,0 +1,144 @@
+body > a
+{
+    position: fixed;
+    right: 0;
+    padding: 0.5rem 1rem;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Podkova';
+}
+body > a:hover
+{
+    color: #FFFFFF;
+}
+h1
+{
+    text-align: center;
+    padding-top: 2%;
+    font-size: 2.5rem;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+p.error
+{
+    font-size: 0.8rem;
+    font-family: 'Syne';
+}
+section aside.row
+{
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+section aside.row .col-md-6
+{
+    width: 50%;
+    font-family: 'Syne';
+    overflow: auto;
+}
+aside.row #actions button
+{
+    display: block;
+    margin-bottom: 3%;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-left-color: #000000;
+    padding: 0.05rem 0.5rem;
+    transition: all 0.1s linear;
+    font-size: 1.2rem;
+    text-align: left;
+    width: auto;
+}
+aside.row #actions button:last-of-type
+{
+    margin-bottom: 0;
+}
+i.bi-chevron-right
+{
+    font-size: 1rem;
+}
+aside.row #actions button:hover
+{
+    border-left: 5px solid #000000;
+}
+aside.row #actions button.active
+{
+    border-left: 5px solid #000000;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+aside.row #forms form
+{
+    display: none;
+}
+aside.row #forms form.show
+{
+    display: block;
+}
+aside.row #forms form *
+{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-family: inherit;
+}
+aside.row #forms form label
+{
+    font-size: 1.2rem;
+}
+aside.row #forms form input:not([type="submit"]), aside.row #forms form select
+{
+    margin: 0 auto 2%;
+    width: 40%;
+}
+select
+{
+    padding: 0.3rem;
+}
+aside.row #forms form input[type="submit"]
+{
+    padding: 0.2rem 1rem;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 1px solid;
+}
+@media screen and (max-width: 991px)
+{
+    aside.row #forms form input:not([type="submit"]), aside.row #forms form select
+    {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 750px)
+{
+    aside.row #forms form input:not([type="submit"]), aside.row #forms form select
+    {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    section aside.row
+    {
+        flex-direction: column;
+    }
+    section aside.row .col-md-6
+    {
+        width: 100%;
+        padding: 1%;
+    }
+    section aside.row #forms form 
+    {
+        border-top: 1px solid;
+        padding-top: 2%;
+    }
+    section aside.row #actions button
+    {
+        margin: 0 auto 3%;
+        border-left-color: transparent;
+    }
+}
