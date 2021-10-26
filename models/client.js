@@ -13,7 +13,7 @@ const clientSchema = new Schema({
         type: Number,
         required: true
     },
-    logo: {
+    website: {
         type: String,
         required: true
     }
