@@ -1,23 +1,13 @@
 const { Router } = require("express");
-const Testimonial = require("./../models/testimonial");
 const Client = require("./../models/client");
 const router = Router();
 
 const name = "Bletchley Technological Solutions Inc.";
 
 router.get("/", (req, res) => {
-    Testimonial.find({}, 'quote name company', (err, testimonials) => {
-        if (err) {
-            console.error(err);
-            res.redirect("/error");
-        } else {
-            testimonials.reverse().slice(0, 5);
-            res.render("index", {
-                title: name, 
-                path: req.path,
-                testimonials
-            });
-        }
+    res.render("index", {
+        title: name, 
+        path: req.path
     });
 });
 
