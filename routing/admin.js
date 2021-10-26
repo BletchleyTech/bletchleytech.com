@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const { v4: uuidv4 } = require("uuid");
 const Admin = require("./../models/admin");
+const Client = require("./../models/client");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const hash = require("hash.js");
@@ -124,6 +125,35 @@ router.post("/dashboard/admin", (req, res) => {
             res.redirect("/admin/dashboard");
         }
     });
+});
+
+router.post("/dashboard/clients", (req, res) => {
+    Client.findOne({name: req.body.name}, (err, client) => {
+        if (err) {
+            console.error(err);
+            res.redirect("/error");
+        } else if (client) {
+            Client.updateOne({name: req.body.name}, {
+                service: req.body.service,
+                rating: req.body.rating,
+                website: req.body.website
+            }, (err, response) => {
+                if (err) {
+                    console.error(err);
+                    res.redirect("/error");
+                }
+            });
+        } else if (!client) {
+            const client = new Client({
+                name: req.body.name,
+                service: req.body.service,
+                rating: req.body.rating,
+                website: req.body.website
+            });
+            client.save();
+        }
+    });
+    res.redirect("/admin/dashboard");
 });
 
 router.get("/logout", (req, res) => {
