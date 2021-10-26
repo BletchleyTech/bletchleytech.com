@@ -18,6 +18,7 @@ html(lang="en")
             p.error #{message}
             aside.row
                 .col-md-6#actions
+                    h2 What do you want to do today?
                     button.profile Update profile information
                         i.bi-chevron-right
                     button.admin Add new admin 
@@ -26,27 +27,27 @@ html(lang="en")
                         i.bi-chevron-right
                 .col-md-6#forms 
                     form#profile(action="/admin/dashboard/profile", method="POST")
-                        label(for="username") Username:
+                        label(for="username") Username
                         input#username(type="text", name="username")
-                        label(for="password") Password:
+                        label(for="password") Password *
                         input#password(type="password", name="password", minlength="10", required)
                         input(type="submit", value="Update")
                     form#admin(action="/admin/dashboard/admin", method="POST") 
-                        label(for="username") Username:
+                        label(for="username") Username *
                         input#username(type="text", name="username", required)
-                        label(for="password") Password: 
+                        label(for="password") Password *
                         input#password(type="password", name="password", required)
                         input(type="submit", value="Add Admin")
                     form#clients(action="/admin/dashboard/clients", method="POST")
-                        label(for="name") Client Name:
+                        label(for="name") Client Name *
                         input#name(type="text", name="name", required)
-                        label(for="service") Service:
+                        label(for="service") Service *
                         select#service(name="service", required)
                             option(value="Web Development") Web Development
                             option(value="App Development") App Development
-                        label(for="rating") Rating:
+                        label(for="rating") Rating *
                         input#rating(type="number", name="rating", min="0", max="5")
-                        label(for="website") Client Website:
+                        label(for="website") Client Website *
                         input#website(type="url", name="website", required)
                         input(type="submit", value="Add client")
 

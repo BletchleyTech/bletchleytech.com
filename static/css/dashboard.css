@@ -40,6 +40,13 @@ section aside.row .col-md-6
     font-family: 'Syne';
     overflow: auto;
 }
+h2
+{
+    font-family: 'Podkova';
+    padding-bottom: 2%;
+    margin-bottom: 3%;
+    border-bottom: 1px solid;
+}
 aside.row #actions button
 {
     display: block;
@@ -131,6 +138,13 @@ aside.row #forms form input[type="submit"]
         width: 100%;
         padding: 1%;
     }
+    h2
+    {
+        text-align: center;
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
     section aside.row #forms form 
     {
         border-top: 1px solid;
@@ -140,5 +154,20 @@ aside.row #forms form input[type="submit"]
     {
         margin: 0 auto 3%;
         border-left-color: transparent;
+    }
+}
+@media screen and (max-width: 500px)
+{
+    h1
+    {
+        font-size: 2rem;
+    }
+    aside.row #actions button, aside.row #forms form label
+    {
+        font-size: 1.1rem;
+    }
+    aside.row #actions button i.bi-chevron-right, aside.row #forms input
+    {
+        font-size: 0.9rem;
     }
 }
