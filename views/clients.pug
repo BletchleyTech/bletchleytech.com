@@ -1,0 +1,21 @@
+extends layout.pug 
+
+block meta
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+
+block styles 
+    link(rel="stylesheet", href="/css/clients.css")
+
+block title 
+    h1 
+    a(href="#clients") 
+        i.bi-arrow-down-short
+
+block body 
+    section.container-fluid#clients
+        h2 Our Clients
+        
+
+block scripts 
+    script(src="/js/clients.js") 
