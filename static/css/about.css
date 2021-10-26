@@ -33,6 +33,11 @@
 {
     background-image: url("./../images/about/clients.jpg");
 }
+#clients button
+{
+    background-color: #000000;
+    color: #FFFFFF;
+}
 #vision
 {
     background-image: url("./../images/about/vision.jpg");
