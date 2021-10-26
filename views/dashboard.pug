@@ -29,7 +29,7 @@ html(lang="en")
                         label(for="username") Username:
                         input#username(type="text", name="username")
                         label(for="password") Password:
-                        input#password(type="password", name="password", required)
+                        input#password(type="password", name="password", minlength="10", required)
                         input(type="submit", value="Update")
                     form#admin(action="/admin/dashboard/admin", method="POST") 
                         label(for="username") Username:
