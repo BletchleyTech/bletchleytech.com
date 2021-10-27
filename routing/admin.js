@@ -2,9 +2,13 @@ const { Router } = require("express");
 const { v4: uuidv4 } = require("uuid");
 const Admin = require("./../models/admin");
 const Client = require("./../models/client");
+const Member = require("./../models/team");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const hash = require("hash.js");
+const multer = require("multer");
+const lodash = require("lodash");
+const path = require("path");
 const router = Router();
 
 router.use(bodyParser.urlencoded({extended: true}));
@@ -12,6 +16,15 @@ router.use(cookieParser());
 
 const name = 'Bletchley Technological Solutions Inc.';
 var message;
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, "..", "static", "images", "members"));
+    }, 
+    filename: (req, file, cb) => {
+        cb(null, `${lodash.camelCase(req.body.name)}.jpg`);
+    }
+});
+const upload = multer({ storage: storage });
 
 router.get("/", (req, res) => {
     if (req.cookies.admin) {
@@ -156,8 +169,20 @@ router.post("/dashboard/clients", (req, res) => {
     res.redirect("/admin/dashboard");
 });
 
-router.post("/dashboard/members", (req, res) => {
-    console.log(req.body);
+router.post("/dashboard/members", upload.single('image'), (req, res) => {
+    const member = new Member({
+        name: req.body.name,
+        title: req.body.title.split(", "),
+        image: `/static/images/members/${req.file.filename}`,
+        socials: {
+            linkedin: req.body.linkedin,
+            facebook: req.body.facebook,
+            instagram: req.body.instagram,
+            twitter: req.body.twitter
+        }
+    });
+    member.save();
+    res.redirect("/admin/dashboard");
 });
 
 router.get("/logout", (req, res) => {
