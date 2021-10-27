@@ -25,6 +25,8 @@ html(lang="en")
                         i.bi-chevron-right
                     button.clients Add new client
                         i.bi-chevron-right
+                    button.members Add new team member 
+                        i.bi-chevron-right
                 .col-md-6#forms 
                     form#profile(action="/admin/dashboard/profile", method="POST")
                         label(for="username") Username
@@ -50,5 +52,21 @@ html(lang="en")
                         label(for="website") Client Website *
                         input#website(type="url", name="website", required)
                         input(type="submit", value="Add client")
+                    form#members(action="/admin/dashboard/members", method="POST", enctype="multipart/form-data")
+                        label(for="name") Name *
+                        input#name(type="text", name="name", required)
+                        label(for="title") Title *
+                        input#title(type="text", name="title", required)
+                        label(for="image") Image *
+                        input#image(type="file", name="image", accept="image/png, image/jpeg", required)
+                        label(for="linkedin") LinkedIn
+                        input#linkedin(type="url", name="linkedin")
+                        label(for="facebook") Facebook
+                        input#facebook(type="url", name="facebook")
+                        label(for="instagram") Instagram
+                        input#instagram(type="url", name="instagram")
+                        label(for="twitter") Twitter
+                        input#twitter(type="url", name="twitter")
+                        input(type="submit", value="Add team member")
 
         script(src="/js/dashboard.js") 

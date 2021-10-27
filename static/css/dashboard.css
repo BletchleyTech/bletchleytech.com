@@ -2,6 +2,7 @@ body > a
 {
     position: fixed;
     right: 0;
+    bottom: 0;
     padding: 0.5rem 1rem;
     background-color: #000000;
     color: #FFFFFF;
@@ -39,6 +40,7 @@ section aside.row .col-md-6
     width: 50%;
     font-family: 'Syne';
     overflow: auto;
+    padding-bottom: 1%;
 }
 h2
 {
@@ -158,9 +160,18 @@ aside.row #forms form input[type="submit"]
 }
 @media screen and (max-width: 500px)
 {
+    body > a
+    {
+        font-size: 0.85rem;
+    }
     h1
     {
         font-size: 2rem;
+    }
+    section aside.row
+    {
+        height: auto;
+        min-height: 80vh;
     }
     aside.row #actions button, aside.row #forms form label
     {
