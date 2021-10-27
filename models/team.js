@@ -12,7 +12,8 @@ const memberSchema = new Schema({
     image: {
         type: String,
         required: true
-    }
+    },
+    socials: Object
 });
 
 const Member = new model('Member', memberSchema);
