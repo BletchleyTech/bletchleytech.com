@@ -156,6 +156,10 @@ router.post("/dashboard/clients", (req, res) => {
     res.redirect("/admin/dashboard");
 });
 
+router.post("/dashboard/members", (req, res) => {
+    console.log(req.body);
+});
+
 router.get("/logout", (req, res) => {
     res.clearCookie("admin");
     res.redirect("/");
