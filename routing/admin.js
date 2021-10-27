@@ -63,7 +63,7 @@ router.get("/dashboard", (req, res) => {
             } else {
                 res.render("dashboard", {
                     title: `Admin Dashboard - ${name}`,
-                    path: req.path,
+                    path: req.baseUrl,
                     admin: admin,
                     message
                 });
