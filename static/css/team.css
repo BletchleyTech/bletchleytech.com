@@ -1,0 +1,61 @@
+.member
+{
+    padding: 2% 3%;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+.member:last-of-type
+{
+    border-bottom: none;
+}
+.member img
+{
+    max-width: 15%;
+    border-radius: 50%;
+    margin: 1% auto;
+}
+.member h3
+{
+    margin-bottom: 0rem;
+    font-family: 'Lexend';
+    font-size: 2rem;
+}
+.member .title, .member .socials
+{
+    font-family: 'Syne';
+    margin-bottom: 0;
+}
+.socials a
+{
+    color: inherit;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+.socials a:last-of-type
+{
+    margin: 0;
+}
+a[title="LinkedIn"]:hover
+{
+    color: #0077B5;
+}
+a[title="Facebook"]:hover
+{
+    color: #4267B2;
+}
+a[title="Instagram"]:hover
+{
+    color: #BC2A8D;
+}
+a[title="Twitter"]:hover
+{
+    color: #55ACEE;
+}
+.member .quote
+{
+    width: 50%;
+    margin: 1% auto 0;
+    font-family: 'Josefin Slab';
+    font-weight: 600;
+    font-size: 1.2rem;
+}
