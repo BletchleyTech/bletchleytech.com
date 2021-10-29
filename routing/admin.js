@@ -14,9 +14,7 @@ const router = Router();
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(cookieParser());
 
-const name = 'Bletchley Technological Solutions Inc.';
-var message;
-const storage = multer.diskStorage({
+const name = 'Bletchley Technological Solutions Inc.', storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, path.join(__dirname, "..", "static", "images", "members"));
     }, 
@@ -25,6 +23,7 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({ storage: storage });
+var message;
 
 router.get("/", (req, res) => {
     if (req.cookies.admin) {
@@ -173,13 +172,15 @@ router.post("/dashboard/members", upload.single('image'), (req, res) => {
     const member = new Member({
         name: req.body.name,
         title: req.body.title.split(", "),
-        image: `/static/images/members/${req.file.filename}`,
+        image: `/images/members/${req.file.filename}`,
         socials: {
             linkedin: req.body.linkedin,
             facebook: req.body.facebook,
             instagram: req.body.instagram,
-            twitter: req.body.twitter
-        }
+            twitter: req.body.twitter,
+            website: req.body.website
+        },
+        quote: req.body.quote
     });
     member.save();
     res.redirect("/admin/dashboard");
