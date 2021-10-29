@@ -7,14 +7,14 @@ const name = "Bletchley Technological Solutions Inc.";
 router.get("/", (req, res) => {
     res.render("index", {
         title: name, 
-        path: req.baseUrl
+        path: req.originalUrl
     });
 });
 
 router.get("/faq", (req, res) => {
     res.render("faq", {
         title: `Frequently Asked Questions - ${name}`,
-        path: req.baseUrl
+        path: req.originalUrl
     });
 });
 
@@ -27,7 +27,7 @@ router.get("/clients", (req, res) => {
             clients.reverse();
             res.render("clients", {
                 title: `Our Clients - ${name}`,
-                path: req.baseUrl,
+                path: req.originalUrl,
                 clients
             });
         }

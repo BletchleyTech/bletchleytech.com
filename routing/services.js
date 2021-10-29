@@ -9,21 +9,21 @@ const name = "Bletchley Technological Solutions Inc.";
 router.get("/", (req, res) => {
     res.render("services", {
         title: `Services - ${name}`, 
-        path: req.baseUrl
+        path: req.originalUrl
     });
 });
 
 router.get("/web", (req, res) => {
     res.render("web", {
         title: `Web Development - ${name}`, 
-        path: req.baseUrl
+        path: req.originalUrl
     });
 });
 
 router.get("/app", (req, res) => {
     res.render("app", {
         title: `App Development - ${name}`,
-        path: req.baseUrl
+        path: req.originalUrl
     });
 });
 
