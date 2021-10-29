@@ -13,7 +13,8 @@ const memberSchema = new Schema({
         type: String,
         required: true
     },
-    socials: Object
+    socials: Object,
+    quote: String
 });
 
 const Member = new model('Member', memberSchema);
