@@ -1,3 +1,8 @@
+#team
+{
+    border-bottom: 1px solid;
+    min-height: auto;
+}
 .member
 {
     padding: 2% 3%;
@@ -58,4 +63,33 @@ a[title="Twitter"]:hover
     font-family: 'Josefin Slab';
     font-weight: 600;
     font-size: 1.2rem;
+}
+@media screen and (max-width: 800px)
+{
+    .member img
+    {
+        max-width: 20%;
+    }
+    .member .quote
+    {
+        font-size: 1.1rem;
+        width: 65%;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    .member
+    {
+        padding: 3%;
+    }
+    .member img
+    {
+        max-width: 35%;
+        margin: 2% auto;
+    }
+    .member .quote
+    {
+        width: 90%;
+        margin-top: 3%;
+    }
 }
