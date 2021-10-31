@@ -1,5 +1,4 @@
 const { Router } = require("express");
-const { v4: uuidv4 } = require("uuid");
 const Admin = require("./../models/admin");
 const Client = require("./../models/client");
 const Member = require("./../models/team");
