@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const client = require("@mailchimp/mailchimp_marketing");
-const nodemailer = require("nodemailer");
 const existence = require("email-existence");
 const Contact = require("./../models/contact");
 require("dotenv").config();
@@ -68,55 +67,6 @@ router.post("/", (req, res) => {
                     });
                     contact.save();
                     res.redirect("/contact/success");
-                    const sender = 'gallegojorge908@gmail.com';
-                    const transporter = nodemailer.createTransport({
-                        service: 'gmail',
-                        auth: {
-                            user: sender,
-                            pass: 'ztpjjeltirtfhtdz'
-                        }
-                    });
-                    const mail = {
-                        from: `'Contact at Bletchley Technological Solutions' ${sender}`,
-                        to: `'${name}' ${email}`,
-                        subject: "We've recieved your request",
-                        html: 
-                            `
-                                <h1 style="margin:0;text-align:center;font-family:sans-serif;padding:2% 0;border-bottom:1px solid;">
-                                    Thanks for your interest
-                                </h1>
-                                <section style="padding:2% 1%;text-align:justify;font-size:1rem;">
-                                    <p style="margin:0;">At Bletchley, we appreciate your interest in our services and your confidence in our abilities.</p>
-                                    <p style="margin:0;">As such, we will now go over the information you provided, review it, and get back to you with a response as soon as possible.</p>
-                                    <p style="margin:0;">We are looking forward to working with you and helping your business grow</p>
-                                </section>
-                                <section style="font-weight:bold;font-family:sans-serif;padding:1%;border-top:1px solid;display:flex;flex-direction:column;flex-wrap:wrap;justify-content:space-between;align-items:center;">
-                                    <div>
-                                        <p style="margin:0;font-size:0.9rem;">
-                                            Bletchley Technological Solutions Inc.
-                                            <br>
-                                            Cra 102B # 148 - 31, 3-6-101
-                                            <br>
-                                            Bogotá D.C., Colombia
-                                        </p>
-                                    </div>
-                                    <div style="text-align:right;margin-left:auto;">
-                                        <h2 style="margin-bottom:0;">Follow Us</h2>
-                                        <p style="margin-top:0;">
-                                            <a style="color:#444444;" href="https://linkedin.com/company/bletchley-tech">LinkedIn</a>
-                                            <a style="color:#444444;" href="https://facebook.com/bletchley-tech">Facebook</a>
-                                            <a style="color:#444444;" href="https://instagram.com/bletchley_tech">Instagram</a>
-                                            <a style="color:#444444;" href="https://twitter.com/bletchleytech">Twitter</a>
-                                        </p>
-                                    </div>
-                                </section>
-                            `
-                        // text: 'At Bletchley Tech we appreciate your interest in our services.\n\nWe will now got through the information you submitted and get back to you as soon as possible.\n\nWe look forward to working with your in the near future.\n\nRegards,\nThe Bletchley Inc. team'
-                    };
-                    transporter.sendMail(mail, (error, info) => {
-                        if (error) console.log(error);
-                        else console.log(`Email sent: ${info.response}`);
-                    });
                 }
                 else
                 {
