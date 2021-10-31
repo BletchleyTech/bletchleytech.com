@@ -190,6 +190,14 @@ h3
     font-size: 1.2rem;
     color: inherit;
 }
+#links .col-md-6 a[href="mailto:contact@bletchleytech.com"]
+{
+    margin-right: 1%;
+}
+#links .col-md-6:last-of-type > p a
+{
+    font-size: 1.3rem;
+}
 #links .col-md-6 a.social
 {
     text-decoration: none;
