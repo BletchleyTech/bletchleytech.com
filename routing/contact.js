@@ -1,16 +1,9 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
-const client = require("@mailchimp/mailchimp_marketing");
 const existence = require("email-existence");
 const Contact = require("./../models/contact");
-require("dotenv").config();
 const router = express.Router();
-
-client.setConfig({
-    apiKey: process.env.MAILCHIMP,
-    server: 'us1'
-});
 
 router.use(express.static(path.join(__dirname, "..", "static")));
 router.use(bodyParser.urlencoded({extended: true}));
@@ -40,46 +33,21 @@ router.post("/", (req, res) => {
             };
             res.redirect("/contact#contact");
         } else {
-            var new_client = {
-                members: [
-                    {
-                        email_address: email,
-                        status: "subscribed",
-                        merge_fields: {
-                            NAME: name,
-                            COMPANY: company,
-                            SERVICE: service,
-                            MESSAGE: message
-                        }
-                    }
-                ]
-            };
-            const run = async () => {
-                const response = await client.lists.batchListMembers('0c7be17030', new_client);
-                if (response.error_count === 0)
-                {
-                    const contact = new Contact({
-                        name: name,
-                        company: company,
-                        email: email,
-                        service: service,
-                        message: message
-                    });
-                    contact.save();
+            const contact = new Contact({
+                name: name,
+                company: company,
+                email: email,
+                service: service,
+                message: message
+            });
+            contact.save(err => {
+                if (err) {
+                    console.error(err);
+                    res.redirect("/error");
+                } else {
                     res.redirect("/contact/success");
                 }
-                else
-                {
-                    if (response.errors[0].error_code === 'ERROR_CONTACT_EXISTS') {
-                        new_client.update_existing = true;
-                        run();
-                    } else {
-                        console.error(response.errors[0].error);
-                        res.redirect("/contact/failure");
-                    }
-                }
-            };
-            run();
+            });
         }
     });
 });
@@ -87,13 +55,6 @@ router.post("/", (req, res) => {
 router.get("/success", (req, res) => {
     res.render("success", {
         title: `Success - ${name}`, 
-        path: req.originalUrl
-    });
-});
-
-router.get("/failure", (req, res) => {
-    res.render("failure", {
-        title: `Failure - ${name}`,
         path: req.originalUrl
     });
 });
