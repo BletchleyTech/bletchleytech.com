@@ -26,16 +26,13 @@ block body
                     label.form-label(for="email") Email
                         span.required *
                     input.form-control#email(type="email", name="email", placeholder="example@email.com", required, aria-describedby="emailText")
-                    p.form-text#emailText(class=data.email?"error":"") #{data.email?data.email:"We'll only use this email to get back at you"}
+                    p.form-text#emailText(class=data.email?"error":"") #{data.email?data.email:"We'll only use this email to get back to you"}
                     label.form-label(for="service") I'm interested in 
                         span.required *
                     select.form-select#service(name="service", required)
                         option(value="Information") General Information
-                        option(value="Web") Web Development 
-                        option(value="App") App Development 
-                        //- option(value="Game") Game Development 
-                        //- option(value="Enterprise") Enterprise Apps 
-                        //- option(value="VR") VR Development   
+                        option(value="Web") Web Development
+                        option(value="App") App Development
                 aside.col-md-6 
                     label.form-label(for="message") Message 
                         span.required *
