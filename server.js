@@ -5,6 +5,7 @@ const routes = require("./routing/routes");
 const about = require("./routing/about");
 const services = require("./routing/services");
 const contact = require("./routing/contact");
+const subscribe = require("./routing/subscribe");
 const admin = require("./routing/admin");
 const files = require("./routing/files");
 const error = require("./routing/error");
@@ -27,6 +28,8 @@ app.use("/about", about);
 app.use("/services", services);
 
 app.use("/contact", contact);
+
+app.use("/subscribe", subscribe);
 
 app.use("/admin", admin);
 

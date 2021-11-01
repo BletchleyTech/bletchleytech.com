@@ -11,7 +11,10 @@ block title
     article.center 
         i.bi-person-check-fill
         h1 Thanks for your interest 
-        h2 We'll get back to you soon
+        if path.includes("/contact")
+            h2 We'll get back to you soon
+        else if path.includes("/subscribe")
+            h2 You have been successfully added to our newsletter
     p You'll be redirected to our homepage in a moment 
 
 block scripts 
