@@ -1,1 +1,1 @@
-const text = 'Join our Newsletter'
+const text = 'Newsletter'
