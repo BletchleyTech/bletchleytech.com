@@ -13,7 +13,8 @@ const router = Router();
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(cookieParser());
 
-const name = 'Bletchley Technological Solutions Inc.', storage = multer.diskStorage({
+const name = 'Bletchley Technological Solutions Inc.';
+const memberStorage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, path.join(__dirname, "..", "static", "images", "members"));
     }, 
@@ -21,7 +22,16 @@ const name = 'Bletchley Technological Solutions Inc.', storage = multer.diskStor
         cb(null, `${lodash.camelCase(req.body.name)}.jpg`);
     }
 });
-const upload = multer({ storage: storage });
+const clientStorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, "..", "static", "images", "clients"));
+    }, 
+    filename: (req, file, cb) => {
+        cb(null, `${lodash.camelCase(req.body.name)}.jpg`);
+    }
+});
+const member = multer({ storage: memberStorage });
+const client = multer({ storage: clientStorage });
 var message;
 
 router.get("/", (req, res) => {
@@ -138,13 +148,14 @@ router.post("/dashboard/admin", (req, res) => {
     });
 });
 
-router.post("/dashboard/clients", (req, res) => {
+router.post("/dashboard/clients", client.single('logo'), (req, res) => {
     Client.findOne({name: req.body.name}, (err, client) => {
         if (err) {
             console.error(err);
             res.redirect("/error");
         } else if (client) {
             Client.updateOne({name: req.body.name}, {
+                logo: `/images/clients/${req.file.filename}`,
                 service: req.body.service,
                 rating: req.body.rating,
                 website: req.body.website
@@ -157,6 +168,7 @@ router.post("/dashboard/clients", (req, res) => {
         } else if (!client) {
             const client = new Client({
                 name: req.body.name,
+                logo: `/images/clients/${req.file.filename}`,
                 service: req.body.service,
                 rating: req.body.rating,
                 website: req.body.website
@@ -167,7 +179,7 @@ router.post("/dashboard/clients", (req, res) => {
     res.redirect("/admin/dashboard");
 });
 
-router.post("/dashboard/members", upload.single('image'), (req, res) => {
+router.post("/dashboard/members", member.single('image'), (req, res) => {
     const member = new Member({
         name: req.body.name,
         title: req.body.title.split(", "),
