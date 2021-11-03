@@ -5,10 +5,13 @@ document.querySelectorAll("aside.row #actions button").forEach(button => {
             notButton.classList.remove("active");
         });
         button.classList.add("active");
-        button.classList.add
         document.querySelectorAll(`aside.row #forms form:not(#${id})`).forEach(form => {
             form.classList.remove("show");
         });
-        document.querySelector(`aside.row #forms form#${id}`).classList.add("show");
+        if (document.querySelector(`aside.row #forms form#${id}`).classList.contains("show")) {
+            document.querySelector(`aside.row #forms form#${id}`).classList.remove("show")
+        } else {
+            document.querySelector(`aside.row #forms form#${id}`).classList.add("show");
+        }
     });
 });
