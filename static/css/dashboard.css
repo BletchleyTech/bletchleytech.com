@@ -99,10 +99,10 @@ aside.row #forms form label
 {
     font-size: 1.2rem;
 }
-aside.row #forms form input:not([type="submit"]), aside.row #forms form select
+aside.row #forms form input:not([type="submit"]), aside.row #forms form select, aside.row #forms form textarea
 {
-    margin: 0 auto 2%;
-    width: 40%;
+    margin-bottom: 2%;
+    width: 50%;
 }
 select
 {
@@ -117,16 +117,16 @@ aside.row #forms form input[type="submit"]
 }
 @media screen and (max-width: 991px)
 {
-    aside.row #forms form input:not([type="submit"]), aside.row #forms form select
+    aside.row #forms form input:not([type="submit"]), aside.row #forms form select, textarea
     {
-        width: 60%;
+        width: 70%;
     }
 }
 @media screen and (max-width: 750px)
 {
-    aside.row #forms form input:not([type="submit"]), aside.row #forms form select
+    aside.row #forms form input:not([type="submit"]), aside.row #forms form select, textarea
     {
-        width: 80%;
+        width: 90%;
     }
 }
 @media screen and (max-width: 600px)
@@ -177,7 +177,7 @@ aside.row #forms form input[type="submit"]
     {
         font-size: 1.1rem;
     }
-    aside.row #actions button i.bi-chevron-right, aside.row #forms input
+    aside.row #actions button i.bi-chevron-right, aside.row #forms input, textarea
     {
         font-size: 0.9rem;
     }
