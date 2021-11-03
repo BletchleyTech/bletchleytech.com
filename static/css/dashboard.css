@@ -117,14 +117,14 @@ aside.row #forms form input[type="submit"]
 }
 @media screen and (max-width: 991px)
 {
-    aside.row #forms form input:not([type="submit"]), aside.row #forms form select, textarea
+    aside.row #forms form input:not([type="submit"]), aside.row #forms form select, aside.row #forms form textarea
     {
         width: 70%;
     }
 }
 @media screen and (max-width: 750px)
 {
-    aside.row #forms form input:not([type="submit"]), aside.row #forms form select, textarea
+    aside.row #forms form input:not([type="submit"]), aside.row #forms form select, aside.row #forms form textarea
     {
         width: 90%;
     }
@@ -177,7 +177,7 @@ aside.row #forms form input[type="submit"]
     {
         font-size: 1.1rem;
     }
-    aside.row #actions button i.bi-chevron-right, aside.row #forms input, textarea
+    aside.row #actions button i.bi-chevron-right, aside.row #forms input, aside.row #forms form textarea
     {
         font-size: 0.9rem;
     }
