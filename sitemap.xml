@@ -3,54 +3,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://bletchleytech.com</loc>
-        <lastmod>2021-10-26</lastmod>
+        <lastmod>2021-11-03</lastmod>
     </url>
     <url>
         <loc>https://bletchleytech.com/robots.txt</loc>
-        <lastmod>2021-10-10</lastmod>
+        <lastmod>2021-11-03</lastmod>
     </url>
     <url>
         <loc>https://bletchleytech.com/sitemap.xml</loc>
-        <lastmod>2021-10-26</lastmod>
+        <lastmod>2021-11-03</lastmod>
     </url>
     <url>
         <loc>https://bletchleytech.com/about</loc>
-        <lastmod>2021-10-26</lastmod>
+        <lastmod>2021-11-03</lastmod>
     </url>
     <url>
-        <loc>https://bletchleytech.com/services</loc>
-        <lastmod>2021-10-16</lastmod>
-    </url>
-    <url>
-        <loc>https://bletchleytech.com/services/web</loc>
-        <lastmod>2021-10-26</lastmod>
-    </url>
-    <url>
-        <loc>https://bletchleytech.com/services/app</loc>
-        <lastmod>2021-10-26</lastmod>
+        <loc>https://bletchleytech.com/about/team</loc>
+        <lastmod>2021-11-03</lastmod>
     </url>
     <url>
         <loc>https://bletchleytech.com/clients</loc>
-        <lastmod>2021-10-26</lastmod>
+        <lastmod>2021-11-03</lastmod>
+    </url>
+    <url>
+        <loc>https://bletchleytech.com/services</loc>
+        <lastmod>2021-11-03</lastmod>
+    </url>
+    <url>
+        <loc>https://bletchleytech.com/services/web</loc>
+        <lastmod>2021-11-03</lastmod>
+    </url>
+    <url>
+        <loc>https://bletchleytech.com/services/app</loc>
+        <lastmod>2021-11-03</lastmod>
     </url>
     <url>
         <loc>https://bletchleytech.com/contact</loc>
-        <lastmod>2021-10-26</lastmod>
+        <lastmod>2021-11-03</lastmod>
     </url>
     <url>
         <loc>https://bletchleytech.com/contact/success</loc>
-        <lastmod>2021-10-26</lastmod>
+        <lastmod>2021-11-03</lastmod>
     </url>
     <url>
         <loc>https://bletchleytech.com/contact/failure</loc>
-        <lastmod>2021-10-26</lastmod>
+        <lastmod>2021-11-03</lastmod>
+    </url>
+    <url>
+        <loc>https://bletchleytech.com/subscribe</loc>
+        <lastmod>2021-11-03</lastmod>
+    </url>
+    <url>
+        <loc>https://bletchleytech.com/subscribe/success</loc>
+        <lastmod>2021-11-03</lastmod>
     </url>
     <url>
         <loc>https://bletchleytech.com/faq</loc>
-        <lastmod>2021-10-26</lastmod>
+        <lastmod>2021-11-03</lastmod>
     </url>
     <url>
         <loc>https://bletchleytech.com/error</loc>
-        <lastmod>2021-10-24</lastmod>
+        <lastmod>2021-11-03</lastmod>
     </url>
 </urlset>
