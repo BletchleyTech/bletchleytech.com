@@ -20,6 +20,7 @@ html(lang="en")
         link(rel="stylesheet", href="/css/media.css")
         block styles
         script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-212032305-1")
+        script(src="/js/layout.js")
     body 
         header.container-fluid#title
             nav.navbar.navbar-expand-lg.navbar-dark.sticky-top
@@ -80,7 +81,6 @@ html(lang="en")
                         | Twitter
             p.copy &copy; Bletchley Technological Solutions Inc. 2021
                 span#year
-        script(src="/js/layout.js")
         script(src="/js/year.js")
         block scripts 
         if title.includes("-")
