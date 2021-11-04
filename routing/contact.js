@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const existence = require("email-existence");
-const nodemailer = require("nodemailer");
 const Contact = require("./../models/contact");
 const router = express.Router();
 
@@ -46,25 +45,6 @@ router.post("/", (req, res) => {
                     console.error(err);
                     res.redirect("/error");
                 } else {
-                    const mailOptions = {
-                        service: 'gmail',
-                        auth: {
-                            user: 'jorge.gallego@bletchleytech.com',
-                            pass: process.env.PASS
-                        }
-                    }
-                    const mail = {
-                        from: "'Contact at Bletchley Technological Solutions Inc.' jorge.gallego@bletchleytech.com",
-                        to: `'${name}' ${email}`,
-                        subject: 'Thank you for your interest',
-                        text: `
-                            At Bletchley Tech, we appreciate your interest in our services.\n
-                            We have received your request. We will now go over it and get back to you as soon as possible with a proposal.\n
-                            \n
-                            Thanks again for your interest in Bletchley.
-                            `
-                    }
-                    nodemailer.createTransport(mailOptions, mail);
                     res.redirect("/contact/success");
                 }
             });
