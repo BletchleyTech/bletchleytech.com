@@ -19,7 +19,7 @@ router.get("/faq", (req, res) => {
 });
 
 router.get("/clients", (req, res) => {
-    Client.find({}, 'name service rating logo', (err, clients) => {
+    Client.find({}, (err, clients) => {
         if (err) {
             console.error(err);
             res.redirect("/error");
