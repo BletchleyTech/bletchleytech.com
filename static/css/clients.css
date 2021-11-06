@@ -1,0 +1,126 @@
+#clients
+{
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.client
+{
+    width: 40%;
+    padding: 2%;
+}
+.client h2
+{
+    margin: 0;
+    font-size: 2.2rem;
+}
+.client a, .client p.rating
+{
+    display: block;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+}
+.client .logo
+{
+    border-radius: 10px;
+    max-width: 40%;
+    transition: box-shadow 0.2s linear;
+    margin: 2% auto;
+}
+.client a:hover .logo
+{
+    box-shadow: 0 0 0.5rem #000000;
+}
+.client .service
+{
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 600;
+}
+.client .rating i
+{
+    color: #EDED00;
+    font-size: 1.2rem;
+}
+.client button
+{
+    border: 1px solid;
+    background-color: transparent;
+    padding: 0.3rem 1rem;
+    font-family: 'Syne';
+    transition: all 0.2s linear;
+}
+@media screen and (max-width: 1000px)
+{
+    .client
+    {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 850px)
+{
+    .client h2
+    {
+        font-size: 1.8rem;
+    }
+    .client .service
+    {
+        font-size: 1.2rem;
+    }
+    .client .rating i
+    {
+        font-size: 1rem;
+    }
+    .client button
+    {
+        font-size: 0.85rem;
+    }
+}
+@media screen and (max-width: 767px)
+{
+    .client
+    {
+        width: 70%;
+    }
+    .client .logo
+    {
+        max-width: 35%;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    .client .logo
+    {
+        max-width: 45%;
+    }
+}
+@media screen and (max-width: 500px)
+{
+    .client
+    {
+        width: 90%;
+    }
+    .client h2
+    {
+        font-size: 1.5rem;
+    }
+    .client .service
+    {
+        font-size: 1.1rem;
+    }
+}
+@media screen and (max-width: 350px)
+{
+    .client
+    {
+        width: 100%;
+    }
+    .client .logo
+    {
+        max-width: 55%;
+    }
+}

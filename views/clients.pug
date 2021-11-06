@@ -14,8 +14,17 @@ block title
 
 block body 
     section.container-fluid#clients
-        h2 Our Clients
-        
+        each client in clients
+            .client
+                h2 #{client.name}
+                a(href=client.website, rel="noreferrer noopener nofollow", target="_blank", title=client.name)
+                    img.logo(src=client.logo, alt=client.name)
+                p.service #{client.service}
+                p.rating
+                    each num in [... Array(client.rating).keys()]
+                        i.bi-star-fill 
+                a(href=`${client.website}`, rel="noreferrer noopener nofollow", target="_blank")
+                    button.btn-outline-dark Visit Website
 
 block scripts 
     script(src="/js/clients.js") 
