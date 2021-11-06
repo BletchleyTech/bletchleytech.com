@@ -17,7 +17,7 @@ block body
         each member in members 
             aside.member 
                 img(src=member.image, alt=member.name)
-                h3 #{member.name}
+                h2 #{member.name}
                 p.title
                     each title, index in member.title 
                         - const length = member.title.length
