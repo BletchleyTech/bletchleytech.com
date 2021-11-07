@@ -2,6 +2,7 @@ const { Router } = require("express");
 const bodyParser = require("body-parser");
 const client = require("@mailchimp/mailchimp_marketing");
 const existence = require("email-existence");
+const Subscriber = require("./../models/subscriber");
 require("dotenv").config();
 const router = Router();
 
@@ -43,6 +44,17 @@ router.post("/", (req, res) => {
                 const response = await client.lists.batchListMembers('4f6a53a121', new_client);
                 if (response.error_count === 0)
                 {
+                    const sub = new Subscriber({
+                        fname: fname,
+                        lname: lname,
+                        email: email
+                    });
+                    sub.save((err) => {
+                        if (err) {
+                            console.error(err);
+                            return res.redirect("/error");
+                        }
+                    });
                     res.redirect("/subscribe/success");
                 }
                 else
