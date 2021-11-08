@@ -1,9 +1,5 @@
 extends layout.pug 
 
-block meta
-    meta(name="description", content="")
-    meta(name="keywords", content="")
-
 block styles 
     link(rel="stylesheet", href="/css/success.css")
 
@@ -11,7 +7,7 @@ block title
     article.center 
         i.bi-person-check-fill
         h1 Thanks for your interest 
-        if path.includes("/contact")
+        if path.includes("/contact") || path.includes("/landing")
             h2 We'll get back to you soon
         else if path.includes("/subscribe")
             h2 You have been successfully added to our newsletter
