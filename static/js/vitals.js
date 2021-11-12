@@ -1,4 +1,4 @@
-import { getCLS, getFID, getLCP } from "https://unpkg.com/web-vitals";
+import { getCLS, getFID, getLCP } from "https://unpkg.com/web-vitals?module";
 
 function sendToGoogleAnalytics({ name, delta, id }) {
 	gtag("event", name, {
