@@ -15,7 +15,7 @@ block title
 block body 
     section.container-fluid#contact
         h2 Get in touch 
-        form(action="/contact", method="POST")
+        form(method="POST")
             article.row 
                 aside.col-md-6 
                     label.form-label(for="name") Name
@@ -36,7 +36,7 @@ block body
                 aside.col-md-6 
                     label.form-label(for="message") Message 
                         span.required *
-                    textarea.form-control#message(name="message", cols="30", rows="9", value=data.message?data.message:"I'm interested in your [service] package. I'm looking to set up a [type of software], and ...", required) 
+                    textarea.form-control#message(name="message", cols="30", rows="9", value=data.message?data.message:"I'm interested in your [service] package. I'm looking to set up an ecommerce/blog/business website/app (please select), and ...", required) 
                     input.btn.btn-light(type="submit", name="submit", value="Submit")
 
 block scripts 
