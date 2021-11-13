@@ -22,6 +22,16 @@ app.use(favicon(path.join(__dirname, "favicon.png")));
 app.use(cors());
 app.set("view engine", "pug");
 
+app.use((req, res, next) => {
+    res.setHeader('Strict-Transport-Security', 'max-age=31536000');
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('X-XSS-Protection', '1; mode=block');
+    res.setHeader('Content-Security-Policy', "default-src https://* style-src-element 'self' script-src-element 'self'");
+    res.setHeader('X-Frame-Options', 'DENY');
+    res.removeHeader('X-Powered-By');
+    next();
+});
+
 app.use(routes);
 
 app.use("/about", about);
