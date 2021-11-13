@@ -2,7 +2,9 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const existence = require("email-existence");
+const nodemailer = require("nodemailer");
 const Contact = require("./../models/contact");
+require("dotenv").config();
 const router = express.Router();
 
 router.use(express.static(path.join(__dirname, "..", "static")));
@@ -46,6 +48,33 @@ router.post("/", (req, res) => {
                     res.redirect("/error");
                 } else {
                     res.redirect("/contact/success");
+                    const transporter = nodemailer.createTransport({
+                        port: 465,
+                        service: 'gmail',
+                        auth: {
+                            user: 'gallegojorge908@gmail.com',
+                            pass: process.env.MAIL
+                        }
+                    });
+                    const mailOptions = {
+                        from: 'gallegojorge908@gmail.com',
+                        to: 'jorge.gallego@bletchleytech.com',
+                        subject: 'New request',
+                        text: 
+                            `
+                                There has been a submission from the Bletchley Technological Solutions Inc. Contact page.
+                                The following information was submitted:
+                                - Name: ${name}
+                                - Company: ${company}
+                                - Email: ${email}
+                                - Service: ${service}
+                                - Message: ${message}
+                            `
+                    };
+                    transporter.sendMail(mailOptions, (err, info) => {
+                        if (err) console.error(err);
+                        else console.log(info.response);
+                    });
                 }
             });
         }
