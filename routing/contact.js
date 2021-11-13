@@ -52,12 +52,12 @@ router.post("/", (req, res) => {
                         port: 465,
                         service: 'gmail',
                         auth: {
-                            user: 'gallegojorge908@gmail.com',
-                            pass: process.env.MAIL
+                            user: process.env.MAIL_SENDER,
+                            pass: process.env.MAIL_PASS
                         }
                     });
                     const mailOptions = {
-                        from: 'gallegojorge908@gmail.com',
+                        from: process.env.MAIL_SENDER,
                         to: 'jorge.gallego@bletchleytech.com',
                         subject: 'New request',
                         text: 
