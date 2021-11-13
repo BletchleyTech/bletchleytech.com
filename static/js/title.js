@@ -8,6 +8,7 @@ const title = () => {
     }
     if (document.querySelector("h1").innerText == text) {
             document.querySelector("#title .bi-arrow-down-short").style.animation = "down 3s infinite";
+            document.querySelector("#title .bi-arrow-down-short").title = "Read More";
     }
 }
 

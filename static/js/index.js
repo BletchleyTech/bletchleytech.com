@@ -12,6 +12,7 @@ const title = () => {
         document.querySelector("#title p").style.opacity = 1;
         setTimeout(() => {
             document.querySelector("#title .bi-arrow-down-short").style.animation = "down 2.5s infinite linear";
+            document.querySelector("#title .bi-arrow-down-short").title = "Read More";
         }, 500);
     }
 }
