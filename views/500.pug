@@ -8,6 +8,9 @@ block title
         h1 We're sorry 
         h2 There was a problem with the server 
     p You can 
-        a(onclick="window.history.back();") go back
+        span#back go back
         |  or go to our 
-        a(onclick="window.href.location='/';") homepage
+        span#home homepage
+
+block scripts 
+    script(src="/js/500.js") 
