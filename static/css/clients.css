@@ -31,7 +31,7 @@
     transition: box-shadow 0.2s linear;
     margin: 2% auto;
 }
-.client a:hover .logo
+.client .logo:hover
 {
     box-shadow: 0 0 0.5rem #000000;
 }
@@ -43,8 +43,9 @@
 }
 .client .rating i
 {
-    color: #EDED00;
+    color: #ffee00;
     font-size: 1.2rem;
+    filter: drop-shadow(0 0 0.5rem #000000);
 }
 .client button
 {
@@ -53,6 +54,8 @@
     padding: 0.3rem 1rem;
     font-family: 'Syne';
     transition: all 0.2s linear;
+    margin: 0 auto;
+    display: block;
 }
 @media screen and (max-width: 1000px)
 {

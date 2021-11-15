@@ -23,8 +23,8 @@ block body
                 p.rating
                     each num in [... Array(client.rating).keys()]
                         i.bi-star-fill 
-                a(href=`${client.website}`, rel="noreferrer noopener nofollow", target="_blank")
-                    button.btn-outline-dark Visit Website
+                button.btn-outline-dark 
+                    a(href=`${client.website}`, rel="noreferrer noopener nofollow", target="_blank") Visit Website
 
 block scripts 
     script(src="/js/clients.js") 
