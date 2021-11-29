@@ -29,7 +29,6 @@ app.use((req, res, next) => {
     res.setHeader('Content-Security-Policy', "default-src https://* style-src-element 'self' script-src-element 'self'");
     res.setHeader('X-Frame-Options', 'DENY');
     res.removeHeader('X-Powered-By');
-    res.removeHeader('Server');
     next();
 });
 
