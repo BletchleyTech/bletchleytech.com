@@ -5,6 +5,7 @@
 	"main": "server.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon server.js",
 		"start": "node server.js"
 	},
 	"repository": {
@@ -29,7 +30,7 @@
 		"hash.js": "^1.1.7",
 		"mongoose": "^6.0.7",
 		"mongoose-encryption": "^2.1.1",
-		"multer": "^1.4.3",
+		"multer": "^1.4.4-lts.1",
 		"nodemailer": "^6.7.0",
 		"pug": "^3.0.2",
 		"serve-favicon": "^2.5.0"
